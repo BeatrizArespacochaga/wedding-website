@@ -1,0 +1,16 @@
+/* Mobile Styles */
+body {
+    font-size: 14px;
+  }
+  
+  nav ul li {
+    padding: 10px 0;
+  }
+  
+  form input {
+    font-size: 14px;
+  }
+  
+  button {
+    padding: 8px 12px;
+  }

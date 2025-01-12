@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'Classy-Coiffeur-Light';
+    src:url('assets/css/fonts/Classy-Coiffeur-Light.ttf.woff') format('woff'),
+        url('assets/css/fonts/Classy-Coiffeur-Light.ttf.svg#Classy-Coiffeur-Light') format('svg'),
+        url('assets/css/fonts/Classy-Coiffeur-Light.ttf.eot'),
+        url('assets/css/fonts/Classy-Coiffeur-Light.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Estilo general para la sección hero (foto de fondo) */
+.hero {
+    position: relative; /* Necesario para colocar el texto encima de la imagen */
+    width: 100%;
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
+    background-image: url('../images/Foto_draft_paginaPrincipal.jpg'); /* Ruta a la imagen de la página principal */
+    background-size: cover; /* Hace que la imagen cubra toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    color: white; /* Color del texto */
+    text-align: center; /* Centra el texto dentro del contenedor */
+}
+
+/* Estilo para la capa que está sobre la imagen (el overlay) */
+.overlay {
+    background-color: rgba(0, 0, 0, 0.082); /* Filtro oscuro para mejorar la visibilidad del texto */
+    padding: 20px; /* Espaciado alrededor del texto */
+    border-radius: 10px; /* Bordes redondeados para el contenedor de texto */
+}
+
+/* Estilo para los nombres de la pareja */
+.names {
+    font-family: 'Didot';
+    font-size: 6rem; /* Tamaño grande para los nombres */
+    font-weight: lighter;
+    margin: 0; /* Elimina el margen por defecto */
+}
+
+/* Estilo para la fecha */
+.date {
+    font-family: 'Optima';
+    font-size: 2rem;
+    font-weight: lighter;
+    margin: 10px 0; /* Espacio entre los elementos */
+}
+
+.rsvp-button {
+    display: inline-block;  /* Para que no sea un bloque, como el comportamiento por defecto */
+    padding: 15px 30px;  /* Espaciado interno, ajusta según sea necesario */
+    font-family: 'Optima';
+    font-size: 2rem;  /* Tamaño del texto */
+    font-weight: lighter;  /* Hacer el texto en negrita */
+    text-align: center;  /* Centrar el texto dentro del botón */
+    text-decoration: none;  /* Quitar el subrayado del enlace */
+    border: 4px solid white;  /* Borde grueso, puedes cambiar el color */
+    border-radius: 0px;  /* Esquinas redondeadas */
+    color: white;  /* Color del texto, igual que el borde */
+    background-color: transparent;  /* Fondo transparente */
+    transition: all 0.5s ease;  /* Efecto de transición para hover */
+}
+
+/* Efecto al pasar el ratón sobre el botón */
+.rsvp-button:hover {
+    background-color: white;  /* Fondo rojo cuando el ratón pasa por encima */
+    color: grey;  /* Cambiar color del texto a blanco */
+    cursor: pointer;  /* Cambiar cursor cuando se pasa sobre el botón */
+}
+
