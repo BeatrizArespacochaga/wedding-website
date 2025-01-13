@@ -32,7 +32,13 @@ header a {
     padding: 5px 10px; /* Espaciado interno de los botones */
 }
 
-
+header a.rsvp-button-1 {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px; /* Espacio entre los enlaces */
+    position: relative; /* Para permitir el subrayado */
+    padding: 5px 10px; /* Espaciado interno de los botones */
+}
 
 
 /* Estilo para subrayar los botones del menú al pasar el ratón */
