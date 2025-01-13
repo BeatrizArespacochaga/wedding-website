@@ -22,6 +22,9 @@ header {
     z-index: 1000; /* Asegura que el menú quede encima de otros elementos */
     margin: 0;
     margin-top: 50px;
+    margin-right: 20px;
+    justify-content: space-between; /* Espacio entre el logo y el menú */
+    align-items: center; /* Alinea verticalmente el logo y el menú */
 }
 
 header a {
@@ -63,6 +66,14 @@ header a:hover::after {
     transform: scaleX(1); /* Muestra el subrayado cuando el ratón pasa por encima */
 }
 
+header.logo{
+    font-family: 'Didot', serif;
+    font-size: 100rem; /* Tamaño más grande del logo */
+    font-weight: bold;
+    text-decoration: none; /* Quita el subrayado */
+    color: black; /* Color del logo */
+    margin-left: -100; /* Mueve el logo hacia la derecha */
+}
 nav {
     display: flex; /* Utilizamos flexbox para alinearlo */
     justify-content: flex-end; /* Alineamos el menú hacia la derecha */
