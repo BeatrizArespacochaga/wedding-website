@@ -1,16 +1,50 @@
-/* Mobile Styles */
-body {
-    font-size: 14px;
+
+/* Media Query para pantallas de 768px o menos */
+@media (max-width: 768px) {
+  .hero {
+      background-size: cover; /* Asegura que la imagen de fondo no se recorte y se ajuste */
+      background-position: center; /* Centra la imagen de fondo */
+  }
+
+  .overlay {
+    position: absolute; /* Permite que la capa se posicione sobre la imagen */
+    top: 0; /* Asegura que la capa comience en la parte superior */
+    left: 0; /* Asegura que la capa comience desde la izquierda */
+    width: 100%; /* Cubre todo el ancho de la pantalla */
+    height: 100%; /* Cubre toda la altura de la pantalla */
+    background-color: rgba(255, 255, 255, 0.246); /* Fondo blanco semitransparente */
+    z-index: 1; /* Asegura que la capa quede encima de la imagen */
+  }
+
+  /* Ajuste del contenido para estar encima de la capa */
+  .content {
+      position: relative; /* Asegura que el contenido esté sobre la capa blanca */
+      z-index: 2; /* Coloca el contenido sobre la capa blanca */
+      color: rgb(81, 79, 79); /* Color del texto */
+      text-align: center; /* Centra el texto */
+      
   }
   
-  nav ul li {
-    padding: 10px 0;
+  .names {
+    font-family: 'Didot';
+    font-size: 2.5rem; /* Tamaño grande para los nombres */
+    font-weight: lighter;
+    margin: 0; /* Elimina el margen por defecto */
+  } 
+
+  .date {
+    font-family: 'Optima';
+    font-size: 1.2rem;
+    font-weight: lighter;
+    margin: 10px 0; /* Espacio entre los elementos */
   }
-  
-  form input {
-    font-size: 14px;
+
+  .rsvp-button {
+    font-size: 1.15rem; /* Tamaño grande para los nombres */
+    background-color: rgba(255, 255, 255, 0.253); /* Color del texto */; /* Color del texto */
+    padding: 10px 10px;
+    border: 1px solid rgb(81, 79, 79); /* Reduce el grosor del borde */
+    border-radius: 0px;  /* Esquinas redondeadas */
+    margin-top: 20px;
   }
-  
-  button {
-    padding: 8px 12px;
-  }
+}

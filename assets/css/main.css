@@ -1,13 +1,3 @@
-@font-face {
-    font-family: 'Classy-Coiffeur-Light';
-    src:url('assets/css/fonts/Classy-Coiffeur-Light.ttf.woff') format('woff'),
-        url('assets/css/fonts/Classy-Coiffeur-Light.ttf.svg#Classy-Coiffeur-Light') format('svg'),
-        url('assets/css/fonts/Classy-Coiffeur-Light.ttf.eot'),
-        url('assets/css/fonts/Classy-Coiffeur-Light.ttf.eot?#iefix') format('embedded-opentype'); 
-    font-weight: normal;
-    font-style: normal;
-}
-
 /* Establece un estilo global para la página */
 body {
     margin: 0; /* Elimina los márgenes predeterminados */

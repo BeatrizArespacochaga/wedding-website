@@ -1,13 +1,3 @@
-@font-face {
-    font-family: 'Classy-Coiffeur-Light';
-    src:url('assets/css/fonts/Classy-Coiffeur-Light.ttf.woff') format('woff'),
-        url('assets/css/fonts/Classy-Coiffeur-Light.ttf.svg#Classy-Coiffeur-Light') format('svg'),
-        url('assets/css/fonts/Classy-Coiffeur-Light.ttf.eot'),
-        url('assets/css/fonts/Classy-Coiffeur-Light.ttf.eot?#iefix') format('embedded-opentype'); 
-    font-weight: normal;
-    font-style: normal;
-}
-
 /* Estilo general para la sección hero (foto de fondo) */
 .hero {
     position: relative; /* Necesario para colocar el texto encima de la imagen */
@@ -20,7 +10,7 @@
     display: flex;
     justify-content: center; /* Centra el contenido horizontalmente */
     align-items: center; /* Centra el contenido verticalmente */
-    color: rgb(61, 60, 60); /* Color del texto */
+    color: rgb(81, 79, 79); /* Color del texto */
     text-align: center; /* Centra el texto dentro del contenedor */
     margin: 0; /* Elimina cualquier margen predeterminado */
     padding: 0; /* Elimina cualquier relleno predeterminado */
@@ -28,9 +18,22 @@
 
 /* Estilo para la capa que está sobre la imagen (el overlay) */
 .overlay {
-    background-color: rgba(0, 0, 0, 0); /* Filtro oscuro para mejorar la visibilidad del texto */
-    padding: 20px; /* Espaciado alrededor del texto */
-    border-radius: 10px; /* Bordes redondeados para el contenedor de texto */
+    position: absolute; /* Permite que la capa se posicione sobre la imagen */
+    top: 0; /* Asegura que la capa comience en la parte superior */
+    left: 0; /* Asegura que la capa comience desde la izquierda */
+    width: 100%; /* Cubre todo el ancho de la pantalla */
+    height: 100%; /* Cubre toda la altura de la pantalla */
+    background-color: rgba(255, 255, 255, 0.309); /* Fondo blanco semitransparente */
+    z-index: 1; /* Asegura que la capa quede encima de la imagen */
+}
+
+
+/* Ajuste del contenido para estar encima de la capa */
+.content {
+    position: relative; /* Asegura que el contenido esté sobre la capa blanca */
+    z-index: 2; /* Coloca el contenido sobre la capa blanca */
+    color: rgb(81, 79, 79);   /* Color del texto */
+    text-align: center; /* Centra el texto */
 }
 
 /* Estilo para los nombres de la pareja */
@@ -52,44 +55,23 @@
 .rsvp-button {
     display: inline-block;  /* Para que no sea un bloque, como el comportamiento por defecto */
     padding: 15px 30px;  /* Espaciado interno, ajusta según sea necesario */
-    font-family: 'Optima';
-    font-size: 2rem;  /* Tamaño del texto */
+    font-family: 'Didot';
+    font-size: 1.5rem;  /* Tamaño del texto */
     font-weight: lighter;  /* Hacer el texto en negrita */
     text-align: center;  /* Centrar el texto dentro del botón */
     text-decoration: none;  /* Quitar el subrayado del enlace */
-    border: 4px solid rgb(61, 60, 60);  /* Borde grueso, puedes cambiar el color */
+    border: 1px solid rgb(61, 60, 60);  /* Borde grueso, puedes cambiar el color */
     border-radius: 0px;  /* Esquinas redondeadas */
-    color: rgb(61, 60, 60);  /* Color del texto, igual que el borde */
-    background-color: transparent;  /* Fondo transparente */
+    color: rgb(81, 79, 79);  /* Color del texto, igual que el borde */
+    background-color: rgba(242, 239, 239, 0.116);  /* Fondo transparente */
     transition: all 0.5s ease;  /* Efecto de transición para hover */
+    margin-top: 20px;
 }
 
 /* Efecto al pasar el ratón sobre el botón */
 .rsvp-button:hover {
-    background-color: rgb(25, 24, 24);  /* Fondo rojo cuando el ratón pasa por encima */
+    background-color: rgb(81, 79, 79);   /* Fondo rojo cuando el ratón pasa por encima */
     color: rgb(207, 200, 200);  /* Cambiar color del texto a blanco */
     cursor: pointer;  /* Cambiar cursor cuando se pasa sobre el botón */
 }
 
-/* Estilos específicos para pantallas más pequeñas */
-@media (max-width: 768px) {
-    .hero {
-      background-size: cover; /* Ajusta la imagen para que se ajuste sin recortarse */
-      margin: 0; /* Elimina cualquier margen predeterminado */
-      padding: 0; /* Elimina cualquier relleno predeterminado */
-    }
-
-    .names {
-        font-family: 'Didot';
-        font-size: 3rem; /* Tamaño grande para los nombres */
-        font-weight: lighter;
-        margin: 0; /* Elimina el margen por defecto */
-    }
-
-    .date {
-        font-family: 'Optima';
-        font-size: 1.5rem;
-        font-weight: lighter;
-        margin: 10px 0; /* Espacio entre los elementos */
-    }
-  }
