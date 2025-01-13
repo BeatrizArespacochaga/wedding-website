@@ -66,14 +66,29 @@ header a:hover::after {
     transform: scaleX(1); /* Muestra el subrayado cuando el ratón pasa por encima */
 }
 
-header.logo{
-    font-family: 'Didot', serif;
-    font-size: 100rem; /* Tamaño más grande del logo */
-    font-weight: bold;
-    text-decoration: none; /* Quita el subrayado */
-    color: black; /* Color del logo */
-    margin-left: -100; /* Mueve el logo hacia la derecha */
+header a.logo {
+    font-family: 'Didot', serif; /* Fuente elegante para el logo */
+    font-size: 3rem; /* Tamaño del texto del logo */
+    font-weight: lighter; /* Negrita para resaltar */
+    letter-spacing: 4px; /* Ajusta el espacio entre letras */
+    color: rgb(81, 79, 79); /* Color del logo */
+    text-decoration: none; /* Sin subrayado */
+    margin-left: 100px; /* Mueve el logo hacia la derecha */
 }
+
+header .logo:hover {
+    color: black; /* Cambia el color al pasar el ratón */
+    cursor: pointer; /* Muestra un puntero */
+}
+
+header a.logo::after {
+    transform: scaleX(0); /* Inicialmente no mostrar subrayado */
+}
+
+header a.logo:hover::after {
+    transform: scaleX(0); /* Muestra el subrayado cuando el ratón pasa por encima */
+}
+
 nav {
     display: flex; /* Utilizamos flexbox para alinearlo */
     justify-content: flex-end; /* Alineamos el menú hacia la derecha */
@@ -99,4 +114,5 @@ nav ul li a {
 
 nav ul li a:hover {
     text-decoration: none; /* Evitar el subrayado predeterminado del navegador */
+    color: black; /* Color del texto */
 }

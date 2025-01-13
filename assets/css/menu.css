@@ -76,6 +76,13 @@ header .logo:hover {
     cursor: pointer; /* Muestra un puntero */
 }
 
+header a.logo::after {
+    transform: scaleX(0); /* Inicialmente no mostrar subrayado */
+}
+
+header a.logo:hover::after {
+    transform: scaleX(0); /* Muestra el subrayado cuando el ratón pasa por encima */
+}
 /* Asegura que el contenido principal no quede cubierto por el menú fijo */
 .hero {
     padding-top: 80px; /* Deja espacio para que el contenido no se oculte bajo el menú */
