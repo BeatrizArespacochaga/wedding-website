@@ -3,6 +3,7 @@ body {
     margin: 0; /* Elimina los márgenes predeterminados */
     font-family: Arial, sans-serif; /* Establece una fuente común */
     line-height: 1.6; /* Mejor legibilidad entre líneas */
+    overflow: hidden;
 }
 
   
@@ -10,4 +11,75 @@ body {
 img {
     max-width: 100%;
     height: auto;
+}
+
+header {
+    position: fixed; /* Asegura que el menú se quede fijo en la parte superior */
+    top: 0; /* Asegura que esté en la parte superior */
+    left: 0;
+    width: 100%;
+    background-color: #fff; /* Fondo blanco para el menú */
+    z-index: 1000; /* Asegura que el menú quede encima de otros elementos */
+    margin: 0;
+    margin-top: 50px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px; /* Espacio entre los enlaces */
+    position: relative; /* Para permitir el subrayado */
+    padding: 5px 10px; /* Espaciado interno de los botones */
+}
+
+
+
+
+/* Estilo para subrayar los botones del menú al pasar el ratón */
+header a:hover {
+    text-decoration: none; /* Evitar el subrayado predeterminado del navegador */
+}
+
+header a::after {
+    content: ''; /* Crea una línea debajo del enlace */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2.5px; /* Ajusta el grosor del subrayado */
+    background-color: rgb(81, 79, 79); /* Color del subrayado */
+    transform: scaleX(0); /* Inicialmente no mostrar subrayado */
+    transform-origin: left; /* Hace que la animación comience desde la izquierda */
+    transition: transform 0.5s ease; /* Transición suave para el subrayado */
+}
+
+header a:hover::after {
+    transform: scaleX(1); /* Muestra el subrayado cuando el ratón pasa por encima */
+}
+
+nav {
+    display: flex; /* Utilizamos flexbox para alinearlo */
+    justify-content: flex-end; /* Alineamos el menú hacia la derecha */
+    padding-right: 20px; /* Un pequeño padding derecho si es necesario */
+}
+
+nav ul {
+    list-style: none; /* Eliminamos los puntos de lista */
+    display: flex; /* Los elementos de la lista van en línea */
+}
+
+nav ul li {
+    margin-left: 20px; /* Espacio entre los enlaces */
+}
+
+nav ul li a {
+    text-decoration: none; /* Quitamos el subrayado de los enlaces */
+    color: #333; /* Color del texto */
+    font-size: 1.2rem; /* Tamaño de fuente */
+    font-weight: lighter; /* Hacemos el texto en negrita */
+    transition: color 0.3s ease; /* Añadimos una transición para el hover */
+}
+
+nav ul li a:hover {
+    text-decoration: none; /* Evitar el subrayado predeterminado del navegador */
 }

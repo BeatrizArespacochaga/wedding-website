@@ -1,0 +1,46 @@
+/* Menú de navegación */
+header.menu {
+    position: fixed; /* Fija el menú en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    background-color: rgba(255, 255, 255, 0); /* Fondo semitransparente */
+    z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
+    height: 60px; /* Ajusta la altura del header */
+}
+
+header.menu ul {
+    display: flex; /* Coloca los elementos en una fila */
+    justify-content: center; /* Centra los elementos en el menú */
+    list-style: none; /* Elimina los estilos de lista */
+    margin: 0; /* Elimina el margen */
+    padding: 0; /* Elimina el relleno */
+}
+
+header.menu li {
+    margin: 0 20px; /* Espaciado entre los elementos del menú */
+}
+
+header.menu a.rsvp-button-1 {
+    color: rgb(61, 60, 60); /* Color del texto */
+    border: 2px solid rgb(61, 60, 60);  /* Borde blanco de 2px */
+    padding: 20px 30px; /* Ajusta el espaciado dentro del borde */
+    border-radius: 0; /* Sin bordes redondeados, bordes cuadrados */
+    margin-left: 20px; /* Espacio a la izquierda si lo necesitas */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+}
+
+header.menu a {
+    font-family: 'Optima', sans-serif; /* Cambia a la fuente que prefieras */
+    font-size: 1.5rem; /* Tamaño de la fuente */
+    color: rgb(61, 60, 60); /* Color del texto */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    padding: 10px 15px; /* Relleno alrededor del texto */
+    border-radius: 5px; /* Esquinas redondeadas */
+    transition: all 0.3s ease; /* Animación suave en hover */
+}
+
+/* Asegura que el contenido principal no quede cubierto por el menú fijo */
+.hero {
+    padding-top: 80px; /* Deja espacio para que el contenido no se oculte bajo el menú */
+}
