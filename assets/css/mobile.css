@@ -1,6 +1,5 @@
-
 /* Media Query para pantallas de 768px o menos */
-@media (max-width: 768px) {
+@media (max-width: 1135px) {
   .hero {
       background-size: cover; /* Asegura que la imagen de fondo no se recorte y se ajuste */
       background-position: center; /* Centra la imagen de fondo */
@@ -45,6 +44,81 @@
     padding: 10px 10px;
     border: 1px solid rgb(81, 79, 79); /* Reduce el grosor del borde */
     border-radius: 0px;  /* Esquinas redondeadas */
+    margin-top: 20px;
+  }
+
+  header.menu-toggle a.logo {
+    font-family: 'Didot', serif;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    letter-spacing: 4px;
+    color: rgb(81, 79, 79);
+    text-decoration: none;
+    margin-left: 30px;
+  }
+
+
+  /* Mostrar el botón hamburguesa */
+  button.burger {
+    display: block;
+    align-self: center;
+    font-size: 2rem;
+    margin-right: 30px;
+  }
+
+  /* Ocultar el menú por defecto */
+  header.menu-toggle nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    background-color: rgb(81, 79, 79);
+    /* background-size: cover; */
+    width: 90%;
+    box-shadow: 0 4px 6px rgb(0 0 0 / 7%);
+    /* box-sizing: border-box; */
+    transition: transform 3.3s ease;
+    transform: translateY(-100%);
+    list-style: none;
+    margin: 0;
+    padding: 0px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+  header.menu-toggle nav ul.active {
+    display: flex; /* Mostrar el menú cuando esté activo */
+    transform: translateY(0); /* Vuelve a su posición */
+  }
+
+  header.menu-toggle nav ul li {
+    text-align: center; /* Centrar elementos en vertical */
+    margin: 10px 0; /* Espaciado entre las opciones */
+  }
+
+  header.menu-toggle nav ul li a {
+    display: inline-block;
+    font-family: 'Didot';
+    font-size: 1.2rem;
+    font-weight: lighter;
+    color: rgb(207, 200, 200);
+    margin-top: 20px;
+}
+
+  header.menu-toggle nav ul li a.rsvp-button-1 {
+    display: inline-block;
+    padding: 15px 30px;
+    font-family: 'Didot';
+    font-size: 1.2rem;
+    font-weight: lighter;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid rgb(207, 200, 200);
+    border-radius: 0px;
+    color: rgb(207, 200, 200);
+    background-color: rgba(242, 239, 239, 0.116);
+    transition: all 0.5s ease;
     margin-top: 20px;
   }
 }

@@ -1,0 +1,31 @@
+  <!-- Ceremonia Religiosa -->
+  <section class="info-section">
+    <div class="info-text">
+      <h2>Ceremonia Religiosa</h2>
+      <p>La Ceremonia Religiosa se celebrará en el Monasterio de Santamaria de Armenteira.</p>
+    </div>
+    <div class="info-img">
+      <img src="assets/images/Sobras_bailando.jpg" alt="Ceremonia religiosa">
+    </div>
+  </section>
+
+  <!-- Celebración -->
+  <section class="info-section">
+    <div class="info-img">
+      <img src="assets/images/dance2.jpg" alt="Celebración">
+    </div>
+    <div class="info-text">
+      <h2>Celebración</h2>
+      <p>La celebración tendrá lugar en la bodega Lagar de Pintos.</p>
+    </div>
+  </section>
+
+  <!-- Mapa -->
+  <section class="map-section">
+    <div id="map">
+      <!-- Aquí puedes incrustar un mapa de Google Maps -->
+      <p>MAP</p>
+    </div>
+  </section>
+
+  <script src="assets/js/scripts.js"></script>

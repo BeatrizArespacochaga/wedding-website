@@ -1,0 +1,115 @@
+@import url("menu.css");
+@import url("mobile.css");
+
+header.menu {
+    position: relative; /* Asegura que el menú se quede fijo en la parte superior */
+    top: 0; /* Asegura que esté en la parte superior */
+    left: 0;
+    width: 100%;
+    background-color: #ffffff00; /* Fondo blanco para el menú */
+    margin: 0;
+    margin-top: 30px;
+    margin-right: 20px;
+    justify-content: space-between; /* Espacio entre el logo y el menú */
+    align-items: center; /* Alinea verticalmente el logo y el menú */
+    text-align: center; /* Centrar el contenido del header */
+    padding: 20px 0; /* Espaciado interno para dar espacio alrededor del contenido */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    z-index: 10; /* Asegura que el header esté por encima de otros contenidos */
+}
+
+header.menu-toggle {
+    display: none;
+}
+
+/* Contenedor principal del carrusel */
+.carousel {
+    display: flex;
+    justify-content: space-between; /* Para poner el contenido de la imagen y el texto a los lados */
+    align-items: center; /* Alinea verticalmente */
+    padding-inline: 10%;
+    padding-block: 5%;    
+}
+
+/* Contenedor del carrusel (imágenes) */
+.carousel-content {
+    position: relative;
+    width: 60%; /* 60% para que ocupe la parte derecha de la pantalla */
+    display: flex;
+    justify-content: center; /* Centra la imagen dentro de su contenedor */
+    align-items: center; /* Alinea verticalmente la imagen */
+}
+
+.carousel-item {
+    width: 100%;
+    display: block;
+}
+
+.carousel-item img {
+    width: 100%; /* Hace que la imagen ocupe todo el contenedor */
+    height: auto; /* Mantiene la proporción */
+    max-height: 400px; /* Limita la altura de la imagen para que no se haga demasiado grande */
+}
+
+/* Botones de navegación */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro con algo de transparencia */
+    color: white;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+}
+
+.carousel-btn.prev {
+    left: 0;
+}
+
+.carousel-btn.next {
+    right: 0;
+}
+
+/* Contenedor de texto */
+.carousel-text {
+    width: 35%; /* 35% para que ocupe la parte izquierda */
+    padding: 20px; /* Espacio alrededor del texto */
+    text-align: center; /* Centra el texto */
+}
+
+/* Estilización del texto */
+.carousel-text h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.carousel-text p {
+    font-size: 1.1rem;
+}
+
+/* Márgenes responsivos: Ajuste para pantallas más pequeñas */
+@media (max-width: 1135px) {
+    header.menu-toggle {
+        margin-top: 10%;
+        position:relative;
+        background-color: rgba(255, 255, 255, 0); /* Fondo semitransparente */
+        display: flex;
+        justify-content: space-between; /* Esto distribuye el logo y el botón a los extremos */
+        align-items: center; /* Alinea los elementos verticalmente */
+        font-size: 3rem;
+    }
+    .carousel {
+        flex-direction: column; /* Cambia a columna en pantallas más pequeñas */
+    }
+
+    .carousel-content, .carousel-text {
+        width: 100%; /* Ocupa el 100% del ancho en pantallas pequeñas */
+    }
+
+    .carousel-btn {
+        font-size: 25px; /* Ajusta el tamaño de los botones en pantallas pequeñas */
+    }
+}

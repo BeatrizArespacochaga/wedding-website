@@ -23,12 +23,12 @@ header.menu ul {
 }
 
 header.menu li {
-    margin: 0 20px; /* Espaciado entre los elementos del menú */
+    margin: 0 15px; /* Espaciado entre los elementos del menú */
 }
 
 header.menu a.rsvp-button-1 {
-    color: rgb(61, 60, 60); /* Color del texto */
-    border: 2px solid rgb(61, 60, 60);  /* Borde blanco de 2px */
+    color: rgb(81, 79, 79); /* Color del texto */
+    border: 2px solid rgb(81, 79, 79);  /* Borde blanco de 2px */
     padding: 20px 30px; /* Ajusta el espaciado dentro del borde */
     border-radius: 0; /* Sin bordes redondeados, bordes cuadrados */
     margin-left: 20px; /* Espacio a la izquierda si lo necesitas */
@@ -38,7 +38,7 @@ header.menu a.rsvp-button-1 {
 }
 
 header.menu a.rsvp-button-1:hover{
-    background-color: rgb(61, 60, 60);  /* Fondo negro al hacer hover */
+    background-color: rgb(81, 79, 79);  /* Fondo negro al hacer hover */
     color: rgb(207, 200, 200); /* Texto sigue siendo blanco */
     border-radius: 10px; /* Sin bordes redondeados, bordes cuadrados */
 }
@@ -54,22 +54,14 @@ header a.rsvp-button-1:hover::after {
 header.menu a {
     font-family: 'Didot', sans-serif; /* Cambia a la fuente que prefieras */
     font-size: 1.5rem; /* Tamaño de la fuente */
-    color: rgb(61, 60, 60); /* Color del texto */
+    color: rgb(81, 79, 79); /* Color del texto */
     text-decoration: none; /* Elimina el subrayado de los enlaces */
     padding: 10px 15px; /* Relleno alrededor del texto */
     border-radius: 5px; /* Esquinas redondeadas */
     transition: all 0.3s ease; /* Animación suave en hover */
 }
 
-header a.logo {
-    font-family: 'Didot', serif; /* Fuente elegante para el logo */
-    font-size: 3rem; /* Tamaño del texto del logo */
-    font-weight: lighter; /* Negrita para resaltar */
-    letter-spacing: 4px; /* Ajusta el espacio entre letras */
-    color: rgb(81, 79, 79); /* Color del logo */
-    text-decoration: none; /* Sin subrayado */
-    margin-left: 100px; /* Mueve el logo hacia la derecha */
-}
+
 
 header .logo:hover {
     color: black; /* Cambia el color al pasar el ratón */
@@ -83,7 +75,25 @@ header a.logo::after {
 header a.logo:hover::after {
     transform: scaleX(0); /* Muestra el subrayado cuando el ratón pasa por encima */
 }
+
+
+/* Ocultar el menú hamburguesa por defecto */
+.burger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: rgb(81, 79, 79);
+}
+
 /* Asegura que el contenido principal no quede cubierto por el menú fijo */
 .hero {
     padding-top: 80px; /* Deja espacio para que el contenido no se oculte bajo el menú */
+}
+
+@media (max-width: 1135px) {
+    header.menu {
+        display: none;
+    }
 }
