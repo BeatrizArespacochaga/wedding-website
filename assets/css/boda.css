@@ -87,9 +87,11 @@ header.menu div.hdcontainer {
 
 /* Contenedor de texto */
 .carousel-text {
-    width: 35%; /* 35% para que ocupe la parte izquierda */
+    width: 100%; /* 35% para que ocupe la parte izquierda */
     padding: 20px; /* Espacio alrededor del texto */
     text-align: center; /* Centra el texto */
+    padding: 0;
+    padding-bottom: 25px;
 }
 
 /* Estilización del texto */
@@ -128,11 +130,6 @@ header.menu div.hdcontainer {
         width: 100%; /* Ocupa el 100% del ancho en pantallas pequeñas */
     }
 
-     .carousel-text {
-        width: 100%; /* Ocupa el 100% del ancho en pantallas pequeñas */
-        padding: 0;
-     }
-
      .carousel-text h2{
         font-family: 'Didot';
         font-size: 2rem;
@@ -143,7 +140,13 @@ header.menu div.hdcontainer {
      .carousel-text p {
         font-size: 1.1rem;
         font-family: 'Optima';
-        color: #713d4e;
+        color: rgb(61, 59, 59);
+        font-size: 1.1rem;
+        font-family: 'Optima';
+        padding: 0;
+        margin-top: 15px;
+        margin-bottom: 30px;
+        
      }
 
     .carousel-btn {
@@ -157,7 +160,57 @@ header.menu div.hdcontainer {
     }
 
     .ubicacionCelebracion h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
         font-weight: lighter;
+        background-color: #713d4e;
+        color: #fbfaf8;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 100%;
     }
+
+    .iglesia {
+        flex-direction: column;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin:0 auto;
+    }
+
+    .iglesia-item {
+        display: block;
+        align-items: center;        
+    }
+
+    .iglesia-item img{
+        width: 100%;
+        height: auto;
+        max-height: 400px;    
+    }
+
+    .iglesia-text h2{
+        font-family: 'Didot';
+        font-size: 2rem;
+        color: #713d4e;;
+        text-align: center;
+        width: 100%;
+
+    }
+
+    .iglesia-text {
+        width: 100%;
+        text-align: center;
+        font-family: 'Optima';
+        font-size: 1.3rem;
+    }
+
+    .iglesia-text a {
+        text-decoration: none;
+        border-color: #713d4e00;
+        font-family: 'Optima';
+        font-size: 1rem;
+        z-index: 1; /* Asegura que la capa quede encima de la imagen */
+     }
 }
+
