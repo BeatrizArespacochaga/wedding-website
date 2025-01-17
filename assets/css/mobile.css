@@ -47,6 +47,17 @@
     margin-top: 20px;
   }
 
+  header.menu-toggle {
+    background-color: rgba(255, 255, 255, 0); /* Fondo semitransparente */
+    display: flex;
+    justify-content: space-between; /* Esto distribuye el logo y el botón a los extremos */
+    align-items: center; /* Alinea los elementos verticalmente */
+    font-size: 3rem;
+    margin: 0 auto;
+    padding-top: 5%;
+    width: 100%;
+  }
+
   header.menu-toggle a.logo {
     font-family: 'Didot', serif;
     font-size: 1.5rem;
@@ -104,6 +115,7 @@
     font-weight: lighter;
     color: rgb(207, 200, 200);
     margin-top: 20px;
+    text-decoration: none;
 }
 
   header.menu-toggle nav ul li a.rsvp-button-1 {
@@ -120,5 +132,12 @@
     background-color: rgba(242, 239, 239, 0.116);
     transition: all 0.5s ease;
     margin-top: 20px;
+  }
+
+  h1 {
+    font-family: 'Didot';
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #713d4e;
   }
 }

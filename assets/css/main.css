@@ -1,3 +1,5 @@
+@import url("mobile.css");
+
 /* Establece un estilo global para la página */
 body {
     margin: 0; /* Elimina los márgenes predeterminados */
@@ -127,11 +129,7 @@ header.menu-toggle {
 
 @media (max-width: 1135px) {
     header.menu-toggle {
-        background-color: rgba(255, 255, 255, 0); /* Fondo semitransparente */
         display: flex;
-        justify-content: space-between; /* Esto distribuye el logo y el botón a los extremos */
-        align-items: center; /* Alinea los elementos verticalmente */
-        font-size: 3rem;
     }
 }
 

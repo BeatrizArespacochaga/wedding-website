@@ -1,39 +1,51 @@
 @import url("menu.css");
 @import url("mobile.css");
 
+body {
+    margin:0;
+}
 header.menu {
-    position: relative; /* Asegura que el menú se quede fijo en la parte superior */
-    top: 0; /* Asegura que esté en la parte superior */
+    position: fixed;
+    top: 0;
     left: 0;
     width: 100%;
-    background-color: #ffffff00; /* Fondo blanco para el menú */
+    height: auto;
+    background-color: rgb(246, 246, 237);
     margin: 0;
-    margin-top: 30px;
-    margin-right: 20px;
-    justify-content: space-between; /* Espacio entre el logo y el menú */
-    align-items: center; /* Alinea verticalmente el logo y el menú */
-    text-align: center; /* Centrar el contenido del header */
-    padding: 20px 0; /* Espaciado interno para dar espacio alrededor del contenido */
-    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
-    z-index: 10; /* Asegura que el header esté por encima de otros contenidos */
+    margin-top: -10px;
+    padding: 0;
+    z-index: 1000;
 }
 
 header.menu-toggle {
     display: none;
 }
 
+header.menu div.hdcontainer {
+    width: 95%;
+    margin-left: 4%;
+    background-color: rgb(250, 250, 250, 0);
+    margin-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 20px 0px;
+    box-sizing: border-box;
+    display: flex;
+    padding-top: 20px;
+}
 /* Contenedor principal del carrusel */
 .carousel {
     display: flex;
-    justify-content: space-between; /* Para poner el contenido de la imagen y el texto a los lados */
-    align-items: center; /* Alinea verticalmente */
-    padding-inline: 10%;
-    padding-block: 5%;    
+    justify-content: center;
+    align-items: center;
+    padding-block: 10%;
+    width: 90%;
+    margin: 0 auto;
 }
 
 /* Contenedor del carrusel (imágenes) */
 .carousel-content {
-    position: relative;
     width: 60%; /* 60% para que ocupe la parte derecha de la pantalla */
     display: flex;
     justify-content: center; /* Centra la imagen dentro de su contenedor */
@@ -93,23 +105,59 @@ header.menu-toggle {
 /* Márgenes responsivos: Ajuste para pantallas más pequeñas */
 @media (max-width: 1135px) {
     header.menu-toggle {
-        margin-top: 10%;
-        position:relative;
-        background-color: rgba(255, 255, 255, 0); /* Fondo semitransparente */
         display: flex;
-        justify-content: space-between; /* Esto distribuye el logo y el botón a los extremos */
-        align-items: center; /* Alinea los elementos verticalmente */
-        font-size: 3rem;
+    }
+
+    header.menu-toggle a.logo{
+        color: #713d4e;
+    }
+
+    button.burger{
+        color: #713d4e; 
+    }
+
+    header.menu-toggle nav ul {
+        background-color:#4d313a; 
     }
     .carousel {
         flex-direction: column; /* Cambia a columna en pantallas más pequeñas */
+        padding-block: 5%;
     }
 
-    .carousel-content, .carousel-text {
+    .carousel-content {
         width: 100%; /* Ocupa el 100% del ancho en pantallas pequeñas */
     }
 
+     .carousel-text {
+        width: 100%; /* Ocupa el 100% del ancho en pantallas pequeñas */
+        padding: 0;
+     }
+
+     .carousel-text h2{
+        font-family: 'Didot';
+        font-size: 2rem;
+        margin-bottom: 15px;
+        color: #713d4e;
+     }
+
+     .carousel-text p {
+        font-size: 1.1rem;
+        font-family: 'Optima';
+        color: #713d4e;
+     }
+
     .carousel-btn {
         font-size: 25px; /* Ajusta el tamaño de los botones en pantallas pequeñas */
+    }
+
+    .ubicacionCelebracion{
+        flex-direction: column; /* Cambia a columna en pantallas más pequeñas */
+        width: 100%; /* Ocupa el 100% del ancho en pantallas pequeñas */
+        text-align: center;
+    }
+
+    .ubicacionCelebracion h1 {
+        font-size: 2.5rem;
+        font-weight: lighter;
     }
 }
