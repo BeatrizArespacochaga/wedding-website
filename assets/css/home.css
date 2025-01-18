@@ -1,4 +1,10 @@
+@import url("main.css");
 /* Estilo general para la sección hero (foto de fondo) */
+
+.body {
+    overflow: hidden;
+}
+
 .hero {
     position: relative; /* Necesario para colocar el texto encima de la imagen */
     width: 100;
@@ -76,3 +82,9 @@
     cursor: pointer;  /* Cambiar cursor cuando se pasa sobre el botón */
 }
 
+
+@media (max-width: 1135px) {
+    button.burger{
+        margin-right: 0px;
+    }
+}

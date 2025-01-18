@@ -48,58 +48,68 @@
   }
 
   header.menu-toggle {
-    background-color: rgba(255, 255, 255, 0); /* Fondo semitransparente */
+    background-color: rgba(255, 255, 255, 0); /* Fondo transparente */
     display: flex;
-    justify-content: space-between; /* Esto distribuye el logo y el botón a los extremos */
-    align-items: center; /* Alinea los elementos verticalmente */
+    justify-content: flex-end; /* Alinea los elementos a la derecha */
+    align-items: center; /* Centra verticalmente */
     font-size: 3rem;
     margin: 0 auto;
-    padding-top: 5%;
-    width: 100%;
-  }
+    padding: 5% 30px; /* Ajusta el espacio alrededor */
+    width: 90%;
+}
 
-  header.menu-toggle a.logo {
+header.menu-toggle a.logo {
     font-family: 'Didot', serif;
-    font-size: 1.5rem;
+    font-size: 1.8rem; /* Aumenta ligeramente el tamaño del logo */
     font-weight: lighter;
     letter-spacing: 4px;
     color: rgb(81, 79, 79);
     text-decoration: none;
-    margin-left: 30px;
-  }
-
-
-  /* Mostrar el botón hamburguesa */
-  button.burger {
+    margin-left: 20px;
+    align-self: center; /* Asegura que el logo esté alineado verticalmente */
     display: block;
-    align-self: center;
-    font-size: 2rem;
-    margin-right: 30px;
-  }
+}
 
+header.menu-toggle a.hidden-logo {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+button.burger {
+    display: block;
+    align-self: center; /* Asegura que el botón esté alineado verticalmente */
+    font-size: 2rem;
+    margin-right: 20px;
+}
   /* Ocultar el menú por defecto */
   header.menu-toggle nav ul {
-    display: none;
+    display: block;
+    opacity: 0;
     flex-direction: column;
-    position: absolute;
+    position: fixed; /* Cambiado a 'fixed' para que siempre esté visible */
     top: 60px;
-    right: 0px;
+    right: 0;
     background-color: rgb(81, 79, 79);
-    /* background-size: cover; */
-    width: 90%;
+    width: 70%; /* Ajusta el ancho del menú */
+    height: auto; /* Asegúrate de que no esté restringido */
     box-shadow: 0 4px 6px rgb(0 0 0 / 7%);
-    /* box-sizing: border-box; */
-    transition: transform 3.3s ease;
-    transform: translateY(-100%);
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    transform: translateX(100%);
     list-style: none;
     margin: 0;
-    padding: 0px;
-    margin-right: 20px;
+    padding: 10px 20px;
+    border-radius: 5px 0 0 5px; /* Bordes redondeados en la izquierda */
+    z-index: 1000;
+    overflow: visible; /* Permitir que el contenido sea visible */
+        right: 25px;
     border-radius: 5px;
+    top: 70px;
 }
 
   header.menu-toggle nav ul.active {
     display: flex; /* Mostrar el menú cuando esté activo */
+    opacity: 1;
     transform: translateY(0); /* Vuelve a su posición */
   }
 

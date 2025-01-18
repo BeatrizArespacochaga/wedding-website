@@ -4,9 +4,12 @@
 body {
     margin: 0; /* Elimina los márgenes predeterminados */
     line-height: 1.6; /* Mejor legibilidad entre líneas */
-    overflow: hidden;
 }
 
+p {
+    margin-block-end: 2em;
+    margin-block-start: 2em;
+}
   
 /* Asegúrate de que todas las imágenes sean responsivas */
 img {

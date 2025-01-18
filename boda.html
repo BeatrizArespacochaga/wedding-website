@@ -7,12 +7,13 @@
   <link rel="stylesheet" href="assets/css/boda.css">
 </head>
 <body>
-    <header class="menu-toggle">
-        <a href="index.html" class="logo">B&M</a>
+    <header class="menu-toggle hidden-logo">
+        <a href="index.html" class="logo hidden-logo">B&amp;M</a>
         <div>
-            <button class="burger" aria-label="Abrir menú">&#9776;</button> <!-- Icono de hamburguesa -->
+            <button class="burger" aria-label="Abrir menú">&#9776;</button>
             <nav>
                 <ul>
+                    <li><a href="index.html">Inicio</a></li>
                     <li><a href="boda.html">Boda</a></li>
                     <li><a href="#contactos">Contactos</a></li>
                     <li><a href="#transporte">Hoteles</a></li>
@@ -23,11 +24,11 @@
         </div>
     </header>
     <header class="menu boda">
-        <div class="hdcontainer boda">
+        <div class="menuContainer boda">
             <a href="index.html" class="logo">B&M</a>
             <nav>
                 <ul>
-                    <li><a href="#boda">Boda</a></li>
+                    <li><a href="boda.html">Boda</a></li>
                     <li><a href="#contactos">Contactos</a></li>
                     <li><a href="#transporte">Hoteles</a></li>
                     <li><a href="#transporte">Transporte</a></li>
@@ -36,35 +37,34 @@
             </nav>
         </div>    
     </header>
-
-  <!-- Carrusel -->
-    <div class="carousel">
-        <div class="carousel-text" style="padding:0">
-            <h2 style="margin-top: 0.5em;">¡Nos Casamos!</h2>
-            <p>Acompáñanos el 5 de Julio de 2025 en la celebración de nuestra boda, en Pontevedra.</p>
+    <div class="hero-section">
+        <div class="overlay"></div>
+        <div class="hero-text">
+            <h2>Beatriz & Miguel</h2>
+            <p>05·07·2025</p>
         </div>
-        <div class="carousel-content">
-            <div class="carousel-item active">
-                <img src="assets/images/Foto_draft_paginaPrincipal.jpg" alt="FotoPrincipal">
+        <img src="assets/images/nosotros_sevilla.jpg" alt="Foto principal">
+    </div>
+    <div class="locations">
+        <div class="text-boda">
+            <p>¡Estamos encantados de que nos acompañanes este día! La boda se celebrará el 5 de Julio de 2025. A continuación te dejamos la localización, tanto de la Misa como la de la celebración, y los horarios de cada una.</p>
+        </div>
+        <div class="location-item">
+            <h2>MONASTERIO DE ARMENTEIRA</h2>
+            <img src="assets/images/monasterio.jpeg" alt="Monasterio de Armenteira">
+            <div class="location-text">
+                <p>La Eucaristía tendrá lugar a las xx:xx en el Monasterio de Santa María de Armenteira.</p>
+                <a href="https://www.google.com/maps/place/Mosteiro+de+Santa+Mar%C3%ADa+da+Armenteira"
+                   >Lugar de la Iglesia, s/n, 36192 A Armenteira, Pontevedra</a>
             </div>
         </div>
-    </div>
-    <div class="ubicacionCelebracion">
-        <!--<h1> _______</h1> -->
-        <h1> Ubicaciones y horarios </h1>
-        <!--<h1> _______</h1>-->
-    </div>
-    <div class="iglesia">
-        <div class="iglesia-text">
-            <h2 >Monasterio de Armenteira</h2>
-        </div>
-        <div class="iglesia-item">
-            <img src="assets/images/Foto_draft_paginaPrincipal.jpg" alt="FotoPrincipal" >    
-        </div>
-        <div class="iglesia-text">
-            <p>La Eucaristia tendrá lugar a las xx:xx en el Monasterio de Santa Maria de Armenteira</p>
-            <a href="https://www.google.com/maps/place/Mosteiro+de+Santa+Mar%C3%ADa+da+Armenteira/@42.4633131,-8.7444928,833m/data=!3m2!1e3!4b1!4m6!3m5!1s0xd2f6e84d59261c9:0xfe938c95ad27baa0!8m2!3d42.4633092!4d-8.7419179!16s%2Fg%2F1231g65p?entry=ttu&g_ep=EgoyMDI1MDExNC4wIKXMDSoASAFQAw%3D%3D" 
-            class="rsvp-button">Dirección: Lugar de la Iglesia, s/n, 36192 A Armenteira, Pontevedra</a> 
+        <div class="location-item reverse">
+            <h2>BODEGA LAGAR DE PINTOS</h2>
+            <img src="assets/images/bodega.jpeg" alt="Recepción">
+            <div class="location-text">
+                <p>La celebración posterior se realizará en la bodega Lagar de Pintos. Sobre las xx:xx</p>
+                <a href="https://www.google.com/maps/place/Bodegas+Lagar+De+Pintos+S.L./@42.5150259,-8.7697954,833m/data=!3m2!1e3!4b1!4m6!3m5!1s0xd2f6b47fa1c9f55:0x5bc65ac2b764e4b8!8m2!3d42.5150259!4d-8.7697954!16s%2Fg%2F1tplrm20?entry=ttu&g_ep=EgoyMDI1MDExNS4wIKXMDSoASAFQAw%3D%3D" >Lugar Pazo, s/n, 36812 Pontevedra</a>
+            </div>
         </div>
     </div>
     <script src="assets/js/scripts.js"></script>
