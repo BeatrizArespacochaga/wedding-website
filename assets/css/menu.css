@@ -1,19 +1,30 @@
-/* Menú de navegación */
+/* Menús de navegación */
 header.menu {
     position: fixed; /* Fija el menú en la parte superior */
     top: 0;
     left: 0;
     width: 100%; /* Ocupa todo el ancho de la pantalla */
-    background-color: rgba(255, 255, 255, 0); /* Fondo semitransparente */
+    background-color: white; /* Fondo semitransparente */
     z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
-    height: 60px; /* Ajusta la altura del header */
     display: flex; /* Alinea los elementos internos en una fila */
     justify-content: space-between; /* Espacio entre el logo y el menú */
     align-items: center; /* Alinea verticalmente el logo y el menú */
     padding: 0 20px; /* Espaciado horizontal entre el contenido y los bordes */
+    margin-bottom: 10px;
+    margin-top: 0px;
+    height: 10vh;
 }
 
-header.menu ul {
+.menu-container {
+    width: 95%;
+    display: flex;
+    justify-content: space-between; /* Espacia los elementos del menú */
+    align-items: center; /* Centra verticalmente */
+    margin: 0 auto;
+}
+
+/* Lista de navegación */
+.menu-container nav ul {
     display: flex; /* Coloca los elementos en una fila */
     justify-content: center; /* Centra los elementos en el menú */
     list-style: none; /* Elimina los estilos de lista */
@@ -22,22 +33,81 @@ header.menu ul {
     margin-right: 50px;
 }
 
-header.menu li {
+.menu-container li {
     margin: 0 15px; /* Espaciado entre los elementos del menú */
+    display: list-item;
 }
 
-header.menu a.rsvp-button-1 {
+
+.menu-container a {
+    font-family: 'Didot', sans-serif; /* Cambia a la fuente que prefieras */
+    font-size: 1.5rem; /* Tamaño de la fuente */
+    font-weight: lighter;
+    color: #e06147; /* Color del texto */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    padding: 10px 15px; /* Relleno alrededor del texto */
+    border-radius: 5px; /* Esquinas redondeadas */
+    transition: all 0.3s ease; /* Animación suave en hover */
+    position: relative; /* Para permitir el subrayado */
+}
+
+.menu-container a:hover {
+    text-decoration: none; /* Evitar el subrayado predeterminado del navegador */
+}
+
+.menu-container a:hover::after {
+    transform: scaleX(1); /* Muestra el subrayado cuando el ratón pasa por encima */
+}
+
+.menu-container a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2.5px;
+    background-color:#e06147;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+}
+
+.menu-container .logo {
+    font-size: 3em;
+    font-weight: bold;
+    color: #e06147;
+    margin:0;
+    letter-spacing: 4px; /* Ajusta el espacio entre letras */
+    padding: 0;
+}
+
+.menu-container .logo:hover {
+    color: #b10029;
+    transition: color 1s ease;
+    cursor: pointer;
+}
+
+.menu-container a.logo::after {
+    transform: scaleX(0); /* Inicialmente no mostrar subrayado */
+}
+
+.menu-container a.logo:hover::after {
+    transform: scaleX(0); /* Muestra el subrayado cuando el ratón pasa por encima */
+}
+
+.menu-container a.rsvp-button-1 {
+    position: relative; /* Para permitir el subrayado */
     color: #e06147; /* Color del texto */
     border: 2px solid #e06147;  /* Borde blanco de 2px */
+    text-decoration: none;
     padding: 20px 30px; /* Ajusta el espaciado dentro del borde */
     border-radius: 0; /* Sin bordes redondeados, bordes cuadrados */
     margin-left: 20px; /* Espacio a la izquierda si lo necesitas */
-    transition: background-color 1s ease, color 1s ease; /* Transición suave */
     background-color: transparent; /* Fondo transparente inicialmente */
     transition: all 1s ease; /* Transición suave para el hover */
 }
 
-header.menu a.rsvp-button-1:hover{
+.menu-container a.rsvp-button-1:hover{
     background-color: #ee8874;  /* Fondo negro al hacer hover */
     color: rgb(255, 255, 255); /* Texto sigue siendo blanco */
     border-radius: 10px; /* Sin bordes redondeados, bordes cuadrados */
@@ -45,57 +115,141 @@ header.menu a.rsvp-button-1:hover{
     transition: all 0.5s ease; /* Transición suave para el hover */
 }
 
-header a.rsvp-button-1::after {
+.menu-container a.rsvp-button-1::after {
     transform: scaleX(0); /* Inicialmente no mostrar subrayado */
 }
 
-header a.rsvp-button-1:hover::after {
+.menu-container a.rsvp-button-1:hover::after {
     transform: scaleX(0); /* Muestra el subrayado cuando el ratón pasa por encima */
 }
-
-header.menu a {
-    font-family: 'Didot', sans-serif; /* Cambia a la fuente que prefieras */
-    font-size: 1.5rem; /* Tamaño de la fuente */
-    color: rgb(81, 79, 79); /* Color del texto */
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-    padding: 10px 15px; /* Relleno alrededor del texto */
-    border-radius: 5px; /* Esquinas redondeadas */
-    transition: all 0.3s ease; /* Animación suave en hover */
-}
-
-
-
-header .logo:hover {
-    color: black; /* Cambia el color al pasar el ratón */
-    cursor: pointer; /* Muestra un puntero */
-}
-
-header a.logo::after {
-    transform: scaleX(0); /* Inicialmente no mostrar subrayado */
-}
-
-header a.logo:hover::after {
-    transform: scaleX(0); /* Muestra el subrayado cuando el ratón pasa por encima */
-}
-
 
 /* Ocultar el menú hamburguesa por defecto */
-.burger {
+.botton.burger {
     display: none;
-    background: none;
-    border: none;
-    font-size: 2rem;
-    cursor: pointer;
-    color: rgb(81, 79, 79);
 }
 
-/* Asegura que el contenido principal no quede cubierto por el menú fijo */
-.hero {
-    padding-top: 80px; /* Deja espacio para que el contenido no se oculte bajo el menú */
+.menu-toggle {
+    display: none;
 }
 
 @media (max-width: 1135px) {
     header.menu {
         display: none;
+    }
+
+    /* Estado inicial del menú (transparente) */
+    .menu-toggle {
+        display: block;
+        margin-bottom: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: rgba(255, 255, 255, 0); /* Fondo transparente */
+        transition: background-color 0.1s ease, color 0.1s ease; /* Suavidad en la transición */
+        padding: 20px 0; /* Ajusta el espacio alrededor */
+        
+    }
+
+    .toggle-container{
+        display: flex;
+        justify-content: space-between; /* Alinea los elementos a la derecha */
+        align-items: center; /* Centra verticalmente */
+        width: 85%;
+        margin: 0 auto;
+
+    }
+    /* Estado al hacer scroll (fondo visible) */
+    .menu-toggle.scrolled {
+        background-color: white; /* Fondo oscuro */
+        background-size: 100%;
+    }
+    
+    header.menu-toggle a.logo {
+        font-family: 'Didot', serif;
+        font-size: 1.8rem; /* Aumenta ligeramente el tamaño del logo */
+        font-weight: lighter;
+        letter-spacing: 4px;
+        color: #e06147;
+        text-decoration: none;
+        align-self: center; /* Asegura que el logo esté alineado verticalmente */
+        display: block;
+        transition: color 0.5s ease; /* Suavidad en la transición del color */
+        margin: 0;
+        padding: 0;
+    }
+      /* Ocultar el menú por defecto */
+    header.menu-toggle nav ul {
+        display: block;
+        opacity: 0;
+        flex-direction: column;
+        position: fixed; /* Cambiado a 'fixed' para que siempre esté visible */
+        top: 60px;
+        right: 0;
+        background-color: rgb(81, 79, 79);
+        width: 70%; /* Ajusta el ancho del menú */
+        height: auto; /* Asegúrate de que no esté restringido */
+        box-shadow: 0 4px 6px rgb(0 0 0 / 7%);
+        transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+        transform: translateX(100%);
+        list-style: none;
+        margin: 0;
+        padding: 10px 20px;
+        border-radius: 5px 0 0 5px; /* Bordes redondeados en la izquierda */
+        z-index: 1000;
+        overflow: visible; /* Permitir que el contenido sea visible */
+            right: 25px;
+        border-radius: 5px;
+        top: 70px;
+    }
+    
+    header.menu-toggle nav ul.active {
+      display: flex; /* Mostrar el menú cuando esté activo */
+      opacity: 1;
+      transform: translateY(0); /* Vuelve a su posición */
+    }
+    
+    header.menu-toggle nav ul li {
+      text-align: center; /* Centrar elementos en vertical */
+      margin: 10px 0; /* Espaciado entre las opciones */
+    }
+    
+    header.menu-toggle nav ul li a {
+      display: inline-block;
+      font-family: 'Didot';
+      font-size: 1.2rem;
+      font-weight: lighter;
+      color: white; /* Usa el color de la clase principal */
+      margin-top: 20px;
+      text-decoration: none;
+    }
+
+    header.menu-toggle button {
+        color:#e06147; /* Usa el color de la clase principal */
+        display: block;
+        align-self: center; /* Asegura que el botón esté alineado verticalmente */
+        font-size: 2rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin: 0;
+        padding: 0;
+    }
+
+    header.menu-toggle nav ul li a.rsvp-button-1 {
+        display: inline-block;
+        padding: 15px 30px;
+        font-family: 'Didot';
+        font-size: 1.2rem;
+        font-weight: lighter;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 0px;
+        border: 1px solid white;
+        color:white;
+        background-color: rgba(242, 239, 239, 0.116);
+        transition: all 0.5s ease;
+        margin-top: 20px;
     }
 }

@@ -12,10 +12,27 @@
 <body>
     <!-- Menú de navegación -->
     <header class="menu-toggle">
-            <button class="burger" style="margin-right: 0px;" aria-label="Abrir menú">&#9776;</button> <!-- Icono de hamburguesa -->
+        <div class="toggle-container">
+            <a href="index.html" class="logo hidden-logo">B&amp;M</a>
+            <div>
+                <button class="burger" aria-label="Abrir menú">&#9776;</button> <!-- Icono de hamburguesa -->
+                <nav>
+                    <ul>
+                        <li><a href="boda.html">Ubicación</a></li>
+                        <li><a href="#contactos">Contactos</a></li>
+                        <li><a href="#transporte">Hoteles</a></li>
+                        <li><a href="#transporte">Transporte</a></li>
+                        <li><a href="rsvp.html" class="rsvp-button-1">RSVP</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <header class="menu" style="background-color: transparent;">
+        <div class="menu-container">
+            <a href="index.html" class="logo">B&M</a>
             <nav>
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
                     <li><a href="boda.html">Ubicación</a></li>
                     <li><a href="#contactos">Contactos</a></li>
                     <li><a href="#transporte">Hoteles</a></li>
@@ -23,18 +40,7 @@
                     <li><a href="rsvp.html" class="rsvp-button-1">RSVP</a></li>
                 </ul>
             </nav>
-    </header>
-    <header class="menu boda">
-        <a href="index.html" class="logo">B&M</a>
-        <nav>
-            <ul>
-                <li><a href="boda.html">Ubicación</a></li>
-                <li><a href="#contactos">Contactos</a></li>
-                <li><a href="#transporte">Hoteles</a></li>
-                <li><a href="#transporte">Transporte</a></li>
-                <li><a href="rsvp.html" class="rsvp-button-1">RSVP</a></li>
-            </ul>
-        </nav>
+        </div>
     </header>
     <!-- Sección de la página principal -->
     <div class="hero">

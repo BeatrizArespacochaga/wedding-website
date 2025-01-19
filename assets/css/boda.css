@@ -7,120 +7,6 @@ body {
     margin: 0;
 }
 
-header.menu-toggle {
-    display: none;
-}
-
-/*
-header.menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    background-color: rgb(246, 246, 237);
-    margin: 0;
-    margin-top: -10px;
-    padding: 0;
-    z-index: 1000;
-}
-
-
-
-header.menu div.hdcontainer {
-    width: 95%;
-    margin-left: 4%;
-    background-color: rgb(250, 250, 250, 0);
-    margin-top: 20px;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    padding: 20px 0px;
-    box-sizing: border-box;
-    display: flex;
-    padding-top: 20px;
-} */
-/* Estilo para el header */
-header.menu.boda {
-    position: fixed; /* Fijo en la parte superior */
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10; /* Coloca el menú encima de todos los demás elementos */
-    background-color: white; /* Fondo semitransparente */
-    margin-bottom: 10px;
-    margin-top: 0px;
-    z-index: 1000;
-    height: 10vh;
-}
-
-/* Contenedor del menú */
-.menuContainer.boda {
-    width: 90%;
-    display: flex;
-    justify-content: space-between; /* Espacia los elementos del menú */
-    align-items: center; /* Centra verticalmente */
-    margin: 0 auto;
-}
-
-/* Logo */
-.menuContainer.boda .logo {
-    font-size: 3em;
-    font-weight: bold;
-    text-decoration: none;
-    color: #e06147;
-    margin:0;
-    padding: 0;
-}
-
-.menuContainer.boda .logo:hover {
-    color: #b10029;
-    transition: color 1s ease;
-}
-
-/* Lista de navegación */
-.menuContainer.boda nav ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-/* Links del menú */
-.menuContainer.boda nav ul li a {
-    text-decoration: none;
-    font-weight: lighter;
-    color: #e06147;
-    transition: color 0.3s ease;
-}
-
-.header a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2.5px;
-    background-color:#e06147;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.5s ease;
-}
-
-
-/* Botón RSVP */
-.rsvp-button-1 {
-    color: white;
-    padding: 0.5em 1em;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 1s ease;
-}
-
-.rsvp-button-1:hover {
-    transition: background-color 1s ease;
-}
-
 .locations {
     padding: 50px 5%;
 }
@@ -150,14 +36,20 @@ header.menu.boda {
     object-position: center;
 }
 
+img.imagen-playa{
+    object-position: left;
+}
+
 
 .text-boda {
+    font-family: 'Optima';
+    font-weight: lighter;
+    font-size: 1.2rem;
     width:60%;
     margin: 0 auto;
     text-align: justify;
     color: #9f9f9f;
     letter-spacing: normal;
-    font-size: 1.2rem;
     line-height: 1.45;
     margin-block-start: 0em;
     margin-block-end: 3em;
@@ -266,57 +158,6 @@ header.menu.boda {
 
 /* Responsive */
 @media (max-width: 1135px) {
-    /* Estado inicial del menú (transparente) */
-    header.menu-toggle {
-        display: flex;
-        margin-bottom: 10px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 93%;
-        margin-top: 0px;
-        margin-bottom: 0px;
-        z-index: 1000;
-        transition: background-color 0.1s ease, color 0.1s ease; /* Suavidad en la transición */
-    }
-
-    /* Estado al hacer scroll (fondo visible) */
-    header.menu-toggle.scrolled {
-        background-color: white; /* Fondo oscuro */
-        display: flex;
-        justify-content: space-between; /* Distribuye logo y botón a los extremos */
-        align-items: center; /* Centra verticalmente logo y botón */
-        font-size: 3rem;
-        margin: 0 auto;
-        padding: 20px 0; /* Ajusta el grosor del header aumentando el relleno */
-        width: 100%;
-        position: fixed; /* Fija el header para que esté siempre visible */
-        z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
-        transition: background-color 0.3s ease; /* Suaviza el cambio de fondo */
-    }
-
-    header.menu-toggle nav ul {
-        background-color:  rgb(81, 79, 79);
-    }
-
-    header.menu-toggle nav ul li a {
-        color: white; /* Usa el color de la clase principal */
-    }
-    /* Ajusta los enlaces si es necesario */
-    header.menu-toggle a.logo {
-        text-decoration: none;
-        color: #e06147; /* Usa el color de la clase principal */
-        transition: color 0.1s ease; /* Suavidad en la transición del color */
-    }
-
-    header.menu-toggle button {
-        color:#e06147; /* Usa el color de la clase principal */
-    }
-
-    header.menu-toggle nav ul li a.rsvp-button-1 {
-        border: 1px solid white;
-        color:white;
-    }
 
     .hero-section {
         position: relative;
@@ -341,58 +182,26 @@ header.menu.boda {
         object-position:left center;
     }
 
-    .hero-text {
-        position: absolute;
-        top: 15%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        color: white;
-        padding: 20px;
-        border-radius: 10px;
-        width: 90%;
-        margin-top: 20px;
-        margin: 20px auto;
-        z-index: 2;
-    }
-
-    .hero-text h2 {
-        display: flex;
-        justify-content: center;
-        font-size: 1.5rem;
-        font-weight: lighter;
-        font-family: 'Didot';
-        letter-spacing: 0.1em;
-        text-align: center;
-        width: 60%;
-        margin: 0 auto;
-        color: #e06147;
-    }
-
-    .hero-text p, .text-boda {
-        font-size: 1.2rem;
+    .text-boda {
+        font-size: 1rem;
         font-family: 'Optima';
         font-weight: lighter;
-        text-align: center;
-        margin:0;
         padding: 0;
-        margin: 20px auto;
-        letter-spacing: 0.35em;
+        width:95%;
+        margin: 0 auto;      
+        text-align: justify;
+        color: rgb(136, 136, 136);
+        margin-block-end: 20px;
+    }
+
+    .text-boda h2{
+        letter-spacing: 0.15em;
+        word-spacing: 0;
+        font-size: 1.1em;
     }
 
     .photo-container {
         display: none;
-    }
-    
-    .text-boda {
-        width:95%;
-        margin: 0 auto;
-        text-align: justify;
-        color: grey;
-        letter-spacing: normal;
-        font-size: 1rem;
-        line-height: 1.45;
-        margin-block-end: 20px;
     }
 
     .locations {
@@ -426,12 +235,12 @@ header.menu.boda {
     }
 
     .location-item h2 {
-        font-size: 1.1rem;
+        font-size: 1.1em;
         margin-bottom: 10px;
         font-weight: lighter;
         letter-spacing: 0.15em;
-        word-spacing: 0.15em;
         color: #e06147;
+        font-family: 'Didot', sans-serif;
     }
 
     .location-text p {
@@ -479,191 +288,7 @@ header.menu.boda {
     .location-compt {
         display: none;
     } 
-    
-    .text-boda h2 {
-        display: none;
-    }
 }
-
-/* Contenedor principal del carrusel 
-.carousel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-block: 10%;
-    width: 90%;
-    margin: 0 auto;
-}
-
-/* Contenedor del carrusel (imágenes) 
-.carousel-content {
-    width: 60%; /* 60% para que ocupe la parte derecha de la pantalla 
-    display: flex;
-    justify-content: center; /* Centra la imagen dentro de su contenedor 
-    align-items: center; /* Alinea verticalmente la imagen 
-}
-
-.carousel-item {
-    width: 100%;
-    display: block;
-}
-
-.carousel-item img {
-    width: 100%; /* Hace que la imagen ocupe todo el contenedor 
-    height: auto; /* Mantiene la proporción 
-    max-height: 400px; /* Limita la altura de la imagen para que no se haga demasiado grande 
-}
-
-/* Botones de navegación 
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro con algo de transparencia 
-    color: white;
-    border: none;
-    font-size: 30px;
-    cursor: pointer;
-    padding: 10px;
-    z-index: 10;
-}
-
-.carousel-btn.prev {
-    left: 0;
-}
-
-.carousel-btn.next {
-    right: 0;
-}
-
-/* Contenedor de texto 
-.carousel-text {
-    width: 100%; /* 35% para que ocupe la parte izquierda 
-    padding: 20px; /* Espacio alrededor del texto 
-    text-align: center; /* Centra el texto 
-    padding: 0;
-    padding-bottom: 25px;
-}
-
-/* Estilización del texto 
-.carousel-text h2 {
-    font-size: 2rem;
-    margin-bottom: 15px;
-}
-
-.carousel-text p {
-    font-size: 1.1rem;
-}
-
-/* Márgenes responsivos: Ajuste para pantallas más pequeñas 
-@media (max-width: 1135px) {
-    header.menu-toggle {
-        display: flex;
-    }
-
-    header.menu-toggle a.logo{
-        color: #713d4e;
-    }
-
-    button.burger{
-        color: #713d4e; 
-    }
-
-    header.menu-toggle nav ul {
-        background-color:#4d313a; 
-    }
-    .carousel {
-        flex-direction: column; /* Cambia a columna en pantallas más pequeñas 
-        padding-block: 5%;
-    }
-
-    .carousel-content {
-        width: 100%; /* Ocupa el 100% del ancho en pantallas pequeñas 
-    }
-
-     .carousel-text h2{
-        font-family: 'Didot';
-        font-size: 2rem;
-        margin-bottom: 15px;
-        color: #713d4e;
-     }
-
-     .carousel-text p {
-        font-size: 1.1rem;
-        font-family: 'Optima';
-        color: rgb(61, 59, 59);
-        font-size: 1.1rem;
-        font-family: 'Optima';
-        padding: 0;
-        margin-top: 15px;
-        margin-bottom: 30px;
-        
-     }
-
-    .carousel-btn {
-        font-size: 25px; /* Ajusta el tamaño de los botones en pantallas pequeñas 
-    }
-
-    .ubicacionCelebracion{
-        flex-direction: column; /* Cambia a columna en pantallas más pequeñas 
-        width: 100%; /* Ocupa el 100% del ancho en pantallas pequeñas 
-        text-align: center;
-    }
-
-    .ubicacionCelebracion h1 {
-        font-size: 2rem;
-        font-weight: lighter;
-        background-color: #713d4e;
-        color: #fbfaf8;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        width: 100%;
-    }
-
-    .iglesia {
-        flex-direction: column;
-        width: 90%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin:0 auto;
-    }
-
-    .iglesia-item {
-        display: block;
-        align-items: center;        
-    }
-
-    .iglesia-item img{
-        width: 100%;
-        height: auto;
-        max-height: 400px;    
-    }
-
-    .iglesia-text h2{
-        font-family: 'Didot';
-        font-size: 2rem;
-        color: #713d4e;;
-        text-align: center;
-        width: 100%;
-
-    }
-
-    .iglesia-text {
-        width: 100%;
-        text-align: center;
-        font-family: 'Optima';
-        font-size: 1.3rem;
-    }
-
-    .iglesia-text a {
-        text-decoration: none;
-        border-color: #713d4e00;
-        font-family: 'Optima';
-        font-size: 1rem;
-        z-index: 1; /* Asegura que la capa quede encima de la imagen
-     }
-}*/
 
 @media (min-width: 1030px) {
     .hero-section {
@@ -672,9 +297,5 @@ header.menu.boda {
 
     .photo-container {
         display: block;
-    }
-
-    .text-boda h2 {
-        display: flex;
     }
 }

@@ -1,16 +1,15 @@
 @import url("mobile.css");
 
-
 /* Establece un estilo global para la página */
 body {
     margin: 0; /* Elimina los márgenes predeterminados */
     line-height: 1.6; /* Mejor legibilidad entre líneas */
 }
 
-/* p {
-   margin-block-end: 2em;
-    margin-block-start: 2em;
-}*/
+/* Asegura que el contenido principal no quede cubierto por el menú fijo */
+.hero {
+    padding-top: 80px; /* Deja espacio para que el contenido no se oculte bajo el menú */
+}
   
 /* Asegúrate de que todas las imágenes sean responsivas */
 img {
@@ -18,123 +17,5 @@ img {
     height: auto;
 }
 
-header {
-    position: fixed; /* Asegura que el menú se quede fijo en la parte superior */
-    top: 0; /* Asegura que esté en la parte superior */
-    left: 0;
-    width: 100%;
-    background-color: #fff; /* Fondo blanco para el menú */
-    z-index: 1000; /* Asegura que el menú quede encima de otros elementos */
-    margin: 0;
-    margin-top: 50px;
-    margin-right: 20px;
-    justify-content: space-between; /* Espacio entre el logo y el menú */
-    align-items: center; /* Alinea verticalmente el logo y el menú */
-}
-
-header a {
-    text-decoration: none;
-    margin-left: 20px; /* Espacio entre los enlaces */
-    position: relative; /* Para permitir el subrayado */
-    padding: 5px 10px; /* Espaciado interno de los botones */
-}
-
-header a.rsvp-button-1 {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px; /* Espacio entre los enlaces */
-    position: relative; /* Para permitir el subrayado */
-    padding: 5px 10px; /* Espaciado interno de los botones */
-}
-
-
-/* Estilo para subrayar los botones del menú al pasar el ratón */
-header a:hover {
-    text-decoration: none; /* Evitar el subrayado predeterminado del navegador */
-}
-
-header a::after {
-    content: ''; /* Crea una línea debajo del enlace */
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2.5px; /* Ajusta el grosor del subrayado */
-    background-color: #e06147; /* Color del subrayado */
-    transform: scaleX(0); /* Inicialmente no mostrar subrayado */
-    transform-origin: left; /* Hace que la animación comience desde la izquierda */
-    transition: transform 0.5s ease; /* Transición suave para el subrayado */
-}
-
-header a:hover::after {
-    transform: scaleX(1); /* Muestra el subrayado cuando el ratón pasa por encima */
-}
-
-header a.logo {
-    font-family: 'Didot', serif; /* Fuente elegante para el logo */
-    font-size: 3rem; /* Tamaño del texto del logo */
-    font-weight: lighter; /* Negrita para resaltar */
-    letter-spacing: 4px; /* Ajusta el espacio entre letras */
-    color: rgb(81, 79, 79); /* Color del logo */
-    text-decoration: none; /* Sin subrayado */
-    margin-left: 50px; /* Mueve el logo hacia la derecha */
-}
-
-header .logo:hover {
-    color: black; /* Cambia el color al pasar el ratón */
-    cursor: pointer; /* Muestra un puntero */
-}
-
-header a.logo::after {
-    transform: scaleX(0); /* Inicialmente no mostrar subrayado */
-}
-
-header a.logo:hover::after {
-    transform: scaleX(0); /* Muestra el subrayado cuando el ratón pasa por encima */
-}
-
-nav {
-    display: flex; /* Utilizamos flexbox para alinearlo */
-    justify-content: flex-end; /* Alineamos el menú hacia la derecha */
-    padding-right: 20px; /* Un pequeño padding derecho si es necesario */
-}
-
-nav ul {
-    list-style: none; /* Eliminamos los puntos de lista */
-    display: flex; /* Los elementos de la lista van en línea */
-    justify-content: center; /* Centra los elementos en el menú */
-    list-style: none; /* Elimina los estilos de lista */
-    margin: 0; /* Elimina el margen */
-    padding: 0; /* Elimina el relleno */
-    margin-right: 50px;
-}
-
-nav ul li {
-    margin-left: 20px; /* Espacio entre los enlaces */
-}
-
-nav ul li a {
-    text-decoration: none; /* Quitamos el subrayado de los enlaces */
-    color: #333; /* Color del texto */
-    font-size: 1.2rem; /* Tamaño de fuente */
-    font-weight: lighter; /* Hacemos el texto en negrita */
-    transition: color 0.3s ease; /* Añadimos una transición para el hover */
-}
-
-nav ul li a:hover {
-    text-decoration: none; /* Evitar el subrayado predeterminado del navegador */
-    color: black; /* Color del texto */
-}
-
-header.menu-toggle {
-    display: none;
-}
-
-
-@media (max-width: 1135px) {
-    header.menu-toggle {
-        display: flex;
-    }
-}
 
 
