@@ -21,7 +21,7 @@ menuToggle.addEventListener('click', () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    //const logo = document.querySelector(".logo");
+    const logo = document.querySelector(".logo");
     const header = document.querySelector("header.menu-toggle");
     
     window.addEventListener("scroll", () => {
