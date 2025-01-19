@@ -1,15 +1,29 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confirmación de Asistencia</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirmación de Asistencia</title>
 </head>
 <body>
-    <h1>Formulario de RSVP</h1>
-    <p>Por favor, confirma tu asistencia a nuestra boda.</p>
-
-    <!-- Google Forms embed code -->
-    <iframe src="https://docs.google.com/forms/d/e/your-form-id/viewform?embedded=true" width="640" height="480" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+    <div class="contenedor-formulario">
+        <h1>¿Asistirás a nuestra boda?</h1>
+        <p>Por favor, confirma si asistirás o no al evento para que podamos organizar mejor el día especial.</p>
+        <div class="button-group">
+            <button class="yes-button" onclick="redirectToForm('yes')">Sí, asistiré</button>
+            <button class="no-button" onclick="redirectToForm('no')">No podré asistir</button>
+        </div>
+    </div>
+  <script>
+    function redirectToForm(answer) {
+      if (answer === 'yes') {
+        // Redirige al formulario de confirmación de asistencia
+        window.location.href = "https://forms.google.com/formulario-asistir";
+      } else if (answer === 'no') {
+        // Redirige al formulario para declinar la invitación
+        window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSeGc0nwdafkC33xItqV5fSUOmjXAimhUkueW4OHSBqaKmPXJg/viewform?usp=dialog";
+      }
+    }
+  </script>
 </body>
 </html>

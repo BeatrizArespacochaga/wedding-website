@@ -21,11 +21,11 @@ menuToggle.addEventListener('click', () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    const logo = document.querySelector(".logo");
+    //const logo = document.querySelector(".logo");
     const header = document.querySelector("header.menu-toggle");
     
     window.addEventListener("scroll", () => {
-        if (window.scrollY > 50) { // Cambia '50' según cuánto scroll deseas que se necesite.
+        if (window.scrollY > 500) { // Cambia '50' según cuánto scroll deseas que se necesite.
             logo.classList.add("logo-visible");
             logo.classList.remove("hidden-logo");
             header.classList.add("scrolled"); // Para aplicar otros cambios al header.

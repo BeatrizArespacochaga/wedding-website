@@ -27,20 +27,22 @@ header.menu li {
 }
 
 header.menu a.rsvp-button-1 {
-    color: rgb(81, 79, 79); /* Color del texto */
-    border: 2px solid rgb(81, 79, 79);  /* Borde blanco de 2px */
+    color: #e06147; /* Color del texto */
+    border: 2px solid #e06147;  /* Borde blanco de 2px */
     padding: 20px 30px; /* Ajusta el espaciado dentro del borde */
     border-radius: 0; /* Sin bordes redondeados, bordes cuadrados */
     margin-left: 20px; /* Espacio a la izquierda si lo necesitas */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
+    transition: background-color 1s ease, color 1s ease; /* Transición suave */
     background-color: transparent; /* Fondo transparente inicialmente */
-    transition: all 0.3s ease; /* Transición suave para el hover */
+    transition: all 1s ease; /* Transición suave para el hover */
 }
 
 header.menu a.rsvp-button-1:hover{
-    background-color: rgb(81, 79, 79);  /* Fondo negro al hacer hover */
-    color: rgb(207, 200, 200); /* Texto sigue siendo blanco */
+    background-color: #ee8874;  /* Fondo negro al hacer hover */
+    color: rgb(255, 255, 255); /* Texto sigue siendo blanco */
     border-radius: 10px; /* Sin bordes redondeados, bordes cuadrados */
+    border-color: #ee8874;
+    transition: all 0.5s ease; /* Transición suave para el hover */
 }
 
 header a.rsvp-button-1::after {
