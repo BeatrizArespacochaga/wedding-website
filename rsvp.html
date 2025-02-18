@@ -4,23 +4,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Confirmación de Asistencia</title>
+  <link rel="stylesheet" href="menu.css">
+  <link rel="stylesheet" href="assets/css/menu.css">
+  <link rel="stylesheet" href="assets/css/rsvp.css"> <!-- Enlace al archivo mobile.css -->
 </head>
 <body>
-    <div class="contenedor-formulario">
-        <h1>¿Asistirás a nuestra boda?</h1>
-        <p>Por favor, confirma si asistirás o no al evento para que podamos organizar mejor el día especial.</p>
-        <div class="button-group">
-            <button class="yes-button" onclick="redirectToForm('yes')">Sí, asistiré</button>
-            <button class="no-button" onclick="redirectToForm('no')">No podré asistir</button>
+  <header class="menu-toggle">
+    <div class="toggle-container">
+        <a href="index.html" class="logo hidden-logo">B&amp;M</a>
+        <div>
+            <button class="burger" aria-label="Abrir menú">&#9776;</button> <!-- Icono de hamburguesa -->
+            <nav>
+                <ul>
+                    <li><a href="boda.html">Ubicación</a></li>
+                    <li><a href="#contactos">Contactos</a></li>
+                    <li><a href="#transporte">Hoteles</a></li>
+                    <li><a href="#transporte">Transporte</a></li>
+                    <li><a href="rsvp.html" class="rsvp-button-1">RSVP</a></li>
+                </ul>
+            </nav>
         </div>
     </div>
+  </header>
+  <header class="menu" style="position: fixed;">
+      <div class="menu-container">
+          <a href="index.html" class="logo">B&M</a>
+          <nav>
+              <ul>
+                  <li><a href="boda.html">Ubicación</a></li>
+                  <li><a href="#contactos">Contactos</a></li>
+                  <li><a href="#transporte">Hoteles</a></li>
+                  <li><a href="#transporte">Transporte</a></li>
+                  <li><a href="rsvp.html" class="rsvp-button-1">RSVP</a></li>
+              </ul>
+          </nav>
+      </div>
+  </header>
+  <div class="overlay"></div>
+  <div class="contenedor-formulario">
+    <h1>¿Asistirás a nuestra boda?</h1>
+    <p>Por favor, confirma si asistirás o no al evento para que podamos organizar mejor el día especial.</p>
+    <div class="button-group">
+      <button class="yes-button" onclick="redirectToForm('yes')">Sí, asistiré</button>
+      <button class="no-button" onclick="redirectToForm('no')">No podré asistir</button>
+    </div>
+  </div>
   <script>
     function redirectToForm(answer) {
       if (answer === 'yes') {
-        // Redirige al formulario de confirmación de asistencia
         window.location.href = "https://forms.google.com/formulario-asistir";
       } else if (answer === 'no') {
-        // Redirige al formulario para declinar la invitación
         window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSeGc0nwdafkC33xItqV5fSUOmjXAimhUkueW4OHSBqaKmPXJg/viewform?usp=dialog";
       }
     }

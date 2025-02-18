@@ -16,7 +16,7 @@ header.menu {
 }
 
 .menu-container {
-    width: 95%;
+    width: 90%;
     display: flex;
     justify-content: space-between; /* Espacia los elementos del menú */
     align-items: center; /* Centra verticalmente */
@@ -34,14 +34,14 @@ header.menu {
 }
 
 .menu-container li {
-    margin: 0 15px; /* Espaciado entre los elementos del menú */
+    margin: 0 10px; /* Espaciado entre los elementos del menú */
     display: list-item;
 }
 
 
 .menu-container a {
-    font-family: 'Didot', sans-serif; /* Cambia a la fuente que prefieras */
-    font-size: 1.5rem; /* Tamaño de la fuente */
+    font-family: 'Optima', sans-serif; /* Cambia a la fuente que prefieras */
+    font-size: 1.2rem; /* Tamaño de la fuente */
     font-weight: lighter;
     color: #e06147; /* Color del texto */
     text-decoration: none; /* Elimina el subrayado de los enlaces */
@@ -52,10 +52,12 @@ header.menu {
 }
 
 .menu-container a:hover {
+    color: #e06147;
     text-decoration: none; /* Evitar el subrayado predeterminado del navegador */
 }
 
 .menu-container a:hover::after {
+    color: #e06147;
     transform: scaleX(1); /* Muestra el subrayado cuando el ratón pasa por encima */
 }
 
@@ -70,11 +72,13 @@ header.menu {
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.5s ease;
+    color: #ee8874;
 }
 
 .menu-container .logo {
-    font-size: 3em;
-    font-weight: bold;
+    font-family: 'Didot', sans-serif;
+    font-size: 2.5em;
+    font-weight: normal;
     color: #e06147;
     margin:0;
     letter-spacing: 4px; /* Ajusta el espacio entre letras */
@@ -112,7 +116,7 @@ header.menu {
     color: rgb(255, 255, 255); /* Texto sigue siendo blanco */
     border-radius: 10px; /* Sin bordes redondeados, bordes cuadrados */
     border-color: #ee8874;
-    transition: all 0.5s ease; /* Transición suave para el hover */
+    transition: all 0.4s ease; /* Transición suave para el hover */
 }
 
 .menu-container a.rsvp-button-1::after {
@@ -187,7 +191,7 @@ header.menu {
         position: fixed; /* Cambiado a 'fixed' para que siempre esté visible */
         top: 60px;
         right: 0;
-        background-color: rgb(81, 79, 79);
+        background-color: #ee8874;;
         width: 70%; /* Ajusta el ancho del menú */
         height: auto; /* Asegúrate de que no esté restringido */
         box-shadow: 0 4px 6px rgb(0 0 0 / 7%);
@@ -202,6 +206,7 @@ header.menu {
             right: 25px;
         border-radius: 5px;
         top: 70px;
+        padding-block-end: 35px;
     }
     
     header.menu-toggle nav ul.active {

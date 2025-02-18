@@ -1,8 +1,29 @@
 /* Media Query para pantallas de 768px o menos */
 @media (max-width: 1135px) {
+  .hero-container {
+    z-index: 1;
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+  }
+  
   .hero {
-      background-size: cover; /* Asegura que la imagen de fondo no se recorte y se ajuste */
-      background-position: center; /* Centra la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    background-image: url(../images/sevilla_mb.JPG);
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    /* color: rgb(81, 79, 79); */
+    /* text-align: center; */
+    /* margin: 0; */
+    /* margin-top: -80px;*/
   }
 
   .overlay {
@@ -11,7 +32,6 @@
     left: 0; /* Asegura que la capa comience desde la izquierda */
     width: 100%; /* Cubre todo el ancho de la pantalla */
     height: 100%; /* Cubre toda la altura de la pantalla */
-    background-color: rgba(255, 255, 255, 0.246); /* Fondo blanco semitransparente */
     z-index: 1; /* Asegura que la capa quede encima de la imagen */
   }
 
@@ -21,6 +41,7 @@
       z-index: 2; /* Coloca el contenido sobre la capa blanca */
       color: rgb(81, 79, 79); /* Color del texto */
       text-align: center; /* Centra el texto */
+      display: none;
       
   }
   

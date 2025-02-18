@@ -5,22 +5,27 @@
     overflow: hidden;
 }
 
+.hero-container{
+    position: absolute;
+    z-index: 1;
+    display: contents;
+}
+
 .hero {
-    position: relative; /* Necesario para colocar el texto encima de la imagen */
-    width: 100;
-    height: 100vh; /* Ocupa toda la altura de la pantalla */
-    background-image: url('../images/Sobras_bailando.jpg'); /* Ruta a la imagen de la página principal */
-    background-size: cover; /* Hace que la imagen cubra toda la pantalla */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-position: center; /* Centra la imagen */
-    display: flex;
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: center; /* Centra el contenido verticalmente */
-    color: rgb(81, 79, 79); /* Color del texto */
-    text-align: center; /* Centra el texto dentro del contenedor */
-    margin: 0; /* Elimina cualquier margen predeterminado */
-    margin-top: -80px;
-    
+    /* position: relative; */
+    width: 80%;
+    height: 65vh;
+    background-image: url(../images/prueba_2.jpeg);
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    background-position: center;
+    /* display: flex
+; */
+    justify-content: center;
+    align-items: center;
+    /* color: rgb(81, 79, 79); */
+    text-align: center;
+    margin: 0 auto;
 }
 
 /* Estilo para la capa que está sobre la imagen (el overlay) */
@@ -30,7 +35,8 @@
     left: 0; /* Asegura que la capa comience desde la izquierda */
     width: 100%; /* Cubre todo el ancho de la pantalla */
     height: 100%; /* Cubre toda la altura de la pantalla */
-    background-color: rgba(255, 255, 255, 0.309); /* Fondo blanco semitransparente */
+    /*background-color: rgb(81 79 79 / 24%);*/
+    /*background-color: rgba(255, 255, 255, 0.309);  Fondo blanco semitransparente */
     z-index: 1; /* Asegura que la capa quede encima de la imagen */
 }
 
@@ -41,29 +47,35 @@
     z-index: 2; /* Coloca el contenido sobre la capa blanca */
     color: rgb(81, 79, 79);   /* Color del texto */
     text-align: center; /* Centra el texto */
+    margin-top: 30px;
 }
 
 /* Estilo para los nombres de la pareja */
 .names {
     font-family: 'Didot';
-    font-size: 6rem; /* Tamaño grande para los nombres */
+    font-size: 2rem; /* Tamaño grande para los nombres */
     font-weight: lighter;
-    margin: 0; /* Elimina el margen por defecto */
+    color: #ea401d;
+    margin-block: 0;
+    margin-inline: 0;
 }
 
 /* Estilo para la fecha */
 .date {
     font-family: 'Optima';
-    font-size: 2rem;
+    font-size: 1.2rem;
     font-weight: lighter;
-    margin: 10px 0; /* Espacio entre los elementos */
+    color: #ea401d;
+    /*margin: 10px;*/ /* Espacio entre los elementos */
+    margin-block: 0;
+    margin-inline: 0;
 }
 
 .rsvp-button {
     display: inline-block;  /* Para que no sea un bloque, como el comportamiento por defecto */
     padding: 15px 30px;  /* Espaciado interno, ajusta según sea necesario */
     font-family: 'Didot';
-    font-size: 1.5rem;  /* Tamaño del texto */
+    font-size: 1rem;  /* Tamaño del texto */
     font-weight: lighter;  /* Hacer el texto en negrita */
     text-align: center;  /* Centrar el texto dentro del botón */
     text-decoration: none;  /* Quitar el subrayado del enlace */
@@ -72,7 +84,6 @@
     color: rgb(81, 79, 79);  /* Color del texto, igual que el borde */
     background-color: rgba(242, 239, 239, 0.116);  /* Fondo transparente */
     transition: all 0.5s ease;  /* Efecto de transición para hover */
-    margin-top: 20px;
 }
 
 /* Efecto al pasar el ratón sobre el botón */

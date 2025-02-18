@@ -40,7 +40,6 @@ img.imagen-playa{
     object-position: left;
 }
 
-
 .text-boda {
     font-family: 'Optima';
     font-weight: lighter;
@@ -171,7 +170,6 @@ img.imagen-playa{
         width: 100%;
         position: absolute;
         z-index: 1;
-        background-color: #fafafa0f;
     }
 
     .hero-section img {
