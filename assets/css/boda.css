@@ -170,6 +170,7 @@ img.imagen-playa{
         width: 100%;
         position: absolute;
         z-index: 1;
+        background-color: #fff4df54;
     }
 
     .hero-section img {

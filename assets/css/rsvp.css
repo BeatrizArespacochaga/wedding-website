@@ -11,51 +11,74 @@ body {
     align-items: center;
     height: 100vh;
   }
-  
+
   .contenedor-formulario {
+    position: relative;
+    z-index: 2;
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px 30px;
+    padding: 50px 30px;
     text-align: center;
-    max-width: 400px;
-    width: 100%;
+    /* max-width: 400px; */
+    width: 70%;
+    box-shadow: 0px 0px 8px rgb(170, 168, 168);
   }
   
   .contenedor-formulario h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #333333;
+    font-family: 'Didot', 'sans-serif';
+    color: #e06147;
+    letter-spacing: 0.15em;
+    word-spacing: 0;
+    font-weight: lighter;
+    font-size:18px;
   }
   
   .contenedor-formulario p {
-    font-size: 16px;
-    margin-bottom: 20px;
-    color: #666666;
+    font-size: 15px;
+    margin: 20px 0px;
+    color: rgb(170, 168, 168);
+    font-family: 'Optima';
+    font-weight: lighter;
   }
   
   .button-group {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    /*display: flex;
+    justify-content: space-around;*/
+    justify-content: center;
   }
   
   button {
     padding: 10px 20px;
     font-size: 16px;
-    border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    font-family: 'Optima';
+    width: 100%;
   }
   
   .yes-button {
-    background-color: #28a745;
-    color: #ffffff;
+    background-color: #ffffff00;
+    color: #e06147;
+    border-color: #e06147;
+    margin: 15px 0px 10px 0px;
+    padding: 20px 40px;
+    border-width: 1.5px;
+    border-style: solid;
+    border-radius: 0;
   }
   
   .no-button {
-    background-color: #dc3545;
-    color: #ffffff;
+    background-color: #fcfafa00;
+    /*color: rgb(136, 136, 136);*/
+    color: #e06147;
+    padding: 0;
+    margin: 10px 0;
+    border: none;
+    font-size: 14px;
+    text-decoration: underline;
   }
   
   button:hover {
@@ -67,11 +90,13 @@ body {
   }
   
   .yes-button:hover {
-    background-color: #218838;
+    background-color: #e06147;
+    color: whitesmoke;
+    transition: all 0.5s ease; /* Transición suave para el hover */
   }
   
   .no-button:hover {
-    background-color: #c82333;
+    color: #e06147;
   }
 
   .overlay {
@@ -80,19 +105,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Color de superposición con transparencia */
+    background-color: rgb(255 255 255 / 73%); /* Color de superposición con transparencia */
     z-index: 1; /* Asegura que la superposición esté encima del fondo */
-}
-
-.contenedor-formulario {
-    position: relative; /* Relativo al overlay */
-    z-index: 2; /* Asegura que el formulario esté encima de la superposición */
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px 30px;
-    text-align: center;
-    max-width: 400px;
-    width: 100%;
 }
   

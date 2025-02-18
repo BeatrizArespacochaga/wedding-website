@@ -1,0 +1,67 @@
+
+@import url("menu.css");
+@import url("mobile.css");
+@import url("main.css");
+@import url("boda.css");
+
+.contactos{
+    position: absolute;
+    top:20%;
+    display: flex;
+    align-content: center;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.menu-toggle {
+    background-color: white;
+}
+
+.contact-container {
+    width: 25%;
+}
+
+.location-item img {
+    width: 60vh;
+    height: 35vh;
+    object-fit: cover;
+    
+}
+
+.text-boda {
+    width: 80%;
+    color: #9f9f9f;
+    margin-block: 0px;
+    font-size: 16px;
+}
+
+.text-boda h2 {
+    font-size: 18px;
+}
+
+@media (max-width: 1135px) {
+    .contactos{
+        top: 10%;
+        display: flow;
+    }
+    .contact-container {
+        margin-block-end: 50px;
+        width: 100%;
+    }
+
+    .location-item {
+        margin-bottom: 40px;
+        width: 80%;
+    }
+
+    .text-boda {
+        width: 80%;
+        color: #9f9f9f;
+        margin-block: 0px;
+        font-size: 15px;
+    }
+
+    .text-boda h2 {
+        font-size: 16px;
+    }
+}

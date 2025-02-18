@@ -1,0 +1,66 @@
+
+@import url("menu.css");
+@import url("mobile.css");
+@import url("main.css");
+@import url("boda.css");
+
+.autobuses{
+    position: absolute;
+    top:10%;
+    display: flex;
+    align-content: center;
+    align-items: baseline;
+    justify-content: center;
+    width: 100%;
+}
+
+.menu-toggle {
+    background-color: white;
+}
+
+.bus-container {
+    width: 100%;
+}
+
+.location-item img {
+    width: 100%;
+    height: 50vh;
+    object-fit: none;
+    object-position: center;
+    
+}
+
+.text-boda {
+    width: 80%;
+    color: #9f9f9f;
+    margin-block: 0px;
+    text-align: center;
+}
+
+
+@media (max-width: 1135px) {
+    .autobuses{
+        top: 10%;
+        display: flow;
+    }
+    .bus-container {
+        margin-block-end: 50px;
+        width: 100%;
+    }
+
+    .location-item {
+        margin-bottom: 40px;
+        width: 100%;
+    }
+
+    .location-item img {
+        object-fit: cover;
+        object-position: right;
+    }
+
+    .text-boda {
+        width: 80%;
+        color: #9f9f9f;
+        margin-block: 0px;
+    }
+}

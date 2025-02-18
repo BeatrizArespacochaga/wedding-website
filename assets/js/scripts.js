@@ -1,38 +1,30 @@
-/*
-// Aquí puedes agregar funcionalidades adicionales, como la validación de formularios,
-// animaciones, o interacciones de la página.
-console.log("Página cargada correctamente");
+fetch('header.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('header').innerHTML = data;
 
-// Ejemplo de animación para el botón de RSVP
-document.querySelector('.btn-rsvp').addEventListener('click', function() {
-    alert("¡Gracias por confirmar tu asistencia!");
-}); 
-*/
+    const burgerButton = document.querySelector('.burger');
+    const mobileMenuList = document.querySelector('.mobile-menu-list');
 
-console.log("Página cargada correctamente");
+    if (burgerButton && mobileMenuList) {
+      burgerButton.addEventListener('click', () => {
+        mobileMenuList.classList.toggle('active'); // Usamos 'active' para mostrar/ocultar
+      });
+    }
 
-// Selección de elementos
-const menuToggle = document.querySelector('.menu-toggle');
-const menu = document.querySelector('nav ul');
-
-// Evento para mostrar/ocultar el menú
-menuToggle.addEventListener('click', () => {
-    menu.classList.toggle('active'); // Agrega/quita la clase 'active'
-});
-
-document.addEventListener("DOMContentLoaded", () => {
     const logo = document.querySelector(".logo");
     const header = document.querySelector("header.menu-toggle");
-    
+
     window.addEventListener("scroll", () => {
-        if (window.scrollY > 500) { // Cambia '50' según cuánto scroll deseas que se necesite.
-            logo.classList.add("logo-visible");
-            logo.classList.remove("hidden-logo");
-            header.classList.add("scrolled"); // Para aplicar otros cambios al header.
-        } else {
-            logo.classList.remove("logo-visible");
-            logo.classList.add("hidden-logo");
-            header.classList.remove("scrolled");
-        }
+      if (window.scrollY > 500) {
+        logo.classList.add("logo-visible");
+        logo.classList.remove("hidden-logo");
+        header.classList.add("scrolled");
+      } else {
+        logo.classList.remove("logo-visible");
+        logo.classList.add("hidden-logo");
+        header.classList.remove("scrolled");
+      }
     });
-});
+  })
+  .catch(error => console.error('Error al cargar el header:', error));

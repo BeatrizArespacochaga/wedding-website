@@ -210,7 +210,7 @@ header.menu {
     }
     
     header.menu-toggle nav ul.active {
-      display: flex; /* Mostrar el menú cuando esté activo */
+      /*display: flex;*/ /* Mostrar el menú cuando esté activo */
       opacity: 1;
       transform: translateY(0); /* Vuelve a su posición */
     }
