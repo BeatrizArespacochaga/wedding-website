@@ -2,6 +2,7 @@
 @import url("menu.css");
 @import url("mobile.css");
 @import url("main.css");
+@import url("boda.css");
 
 body {
     margin: 0;
@@ -12,30 +13,16 @@ body {
 }
 
 .photo-container {
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
     margin-bottom: 3.5em;
 }
 
-.photo-block {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    /* gap: 26px; */
-    margin:auto auto;
-    margin-top: 2em;
-    width: 95%;
-}
-
-.photo-block img {
-    width: 30%; /* Las imágenes ocuparán el 30% del ancho del bloque */
-    height: 60vh; /* Mantiene las proporciones originales de las imágenes */
-    object-fit: cover; /* Asegura que las imágenes no se deformen */
-    object-position: center;
-}
-
 img.imagen-playa{
-    object-position: left;
+    object-position: center;
+    width: 100%;
+    height: 65vh;
+    object-fit: cover;
 }
 
 .text-boda {

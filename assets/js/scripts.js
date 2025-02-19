@@ -3,15 +3,38 @@ fetch('header.html')
   .then(data => {
     document.getElementById('header').innerHTML = data;
 
+    // Funcionalidad del menú hamburguesa
     const burgerButton = document.querySelector('.burger');
     const mobileMenuList = document.querySelector('.mobile-menu-list');
 
     if (burgerButton && mobileMenuList) {
       burgerButton.addEventListener('click', () => {
-        mobileMenuList.classList.toggle('active'); // Usamos 'active' para mostrar/ocultar
+        mobileMenuList.classList.toggle('active'); // Muestra/oculta el menú móvil
       });
     }
 
+    // Funcionalidad del submenú "Eventos"
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+    dropdownToggles.forEach(toggle => {
+      toggle.addEventListener('click', (e) => {
+        e.preventDefault(); // Evita la navegación inmediata
+        const parentDropdown = toggle.closest('.dropdown');
+        parentDropdown.classList.toggle('active'); // Alterna la visibilidad del submenú
+      });
+    });
+
+    // 🛡️ Cierra el submenú al hacer clic fuera
+    document.addEventListener('click', (event) => {
+      dropdownToggles.forEach(toggle => {
+        const parentDropdown = toggle.closest('.dropdown');
+        if (!parentDropdown.contains(event.target) && !toggle.isSameNode(event.target)) {
+          parentDropdown.classList.remove('active'); // Cierra el submenú si haces clic fuera
+        }
+      });
+    });
+
+    // Cambia la visibilidad del logo, estilo del header y cierra la hamburguesa con el scroll
     const logo = document.querySelector(".logo");
     const header = document.querySelector("header.menu-toggle");
 
@@ -24,6 +47,11 @@ fetch('header.html')
         logo.classList.remove("logo-visible");
         logo.classList.add("hidden-logo");
         header.classList.remove("scrolled");
+      }
+
+      // 🚀 NUEVO: Cierra el menú hamburguesa si está abierto al hacer scroll
+      if (mobileMenuList && mobileMenuList.classList.contains('active')) {
+        mobileMenuList.classList.remove('active');
       }
     });
   })

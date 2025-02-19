@@ -9,7 +9,6 @@ header.menu {
     display: flex; /* Alinea los elementos internos en una fila */
     justify-content: space-between; /* Espacio entre el logo y el menú */
     align-items: center; /* Alinea verticalmente el logo y el menú */
-    padding: 0 20px; /* Espaciado horizontal entre el contenido y los bordes */
     margin-bottom: 10px;
     margin-top: 0px;
     height: 10vh;
@@ -30,11 +29,10 @@ header.menu {
     list-style: none; /* Elimina los estilos de lista */
     margin: 0; /* Elimina el margen */
     padding: 0; /* Elimina el relleno */
-    margin-right: 50px;
 }
 
 .menu-container li {
-    margin: 0 10px; /* Espaciado entre los elementos del menú */
+    margin-left: 10px;
     display: list-item;
 }
 
@@ -135,6 +133,53 @@ header.menu {
 .menu-toggle {
     display: none;
 }
+
+/* --- Submenú desplegable para "Eventos" --- */
+.menu-container li.dropdown {
+    position: relative;
+  }
+  
+  .menu-container .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    padding: 10px 0;
+    border-radius: 0px;
+    list-style: none;
+    min-width: 150px;
+    z-index: 1000;
+  }
+  
+  .menu-container .dropdown-menu li {
+    width: 75%;
+  }
+  
+  .menu-container .dropdown-menu li a {
+    display: block;
+    /*padding: 10px 20px;*/
+    font-size: 1rem;
+    color: #e06147;
+    transition: background-color 0.3s ease;
+    width: 60%;
+  }
+  
+  /*.menu-container .dropdown-menu li a:hover {
+    background-color: #ee8874;
+    color: white;
+  }*/
+  
+  /* Mostrar submenú al pasar el ratón */
+  .menu-container li.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  /* Flecha indicadora en "Eventos" */
+  .menu-container .dropdown-toggle::after {
+    font-size: 0.8rem;
+  }  
+
 
 @media (max-width: 1135px) {
     header.menu {
@@ -256,5 +301,38 @@ header.menu {
         background-color: rgba(242, 239, 239, 0.116);
         transition: all 0.5s ease;
         margin-top: 20px;
+    }
+
+    .menu-toggle .dropdown {
+        position: relative;
+    }
+
+    .menu-toggle .dropdown-menu {
+        display: none;
+        position: static;
+        background-color: transparent;
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .menu-toggle .dropdown-menu li a {
+        color: white;
+        padding: 10px 20px;
+    }
+
+    .menu-toggle .dropdown.active .dropdown-menu {
+        display: contents;
+    }
+
+    /* Flecha indicadora */
+    .menu-toggle .dropdown-toggle::after {
+        content: ' ▼';
+        font-size: 0.8rem;
+        margin-left: 5px;
+    }
+
+    .menu-toggle .dropdown.active .dropdown-toggle::after {
+        content: ' ▲'; /* Cambia la flecha al abrir */
     }
 }

@@ -2,65 +2,160 @@
 @import url("menu.css");
 @import url("mobile.css");
 @import url("main.css");
-@import url("boda.css");
 
-.autobuses{
-    position: absolute;
-    top:10%;
+body {
+    margin: 0;
+}
+
+.map {
+    position: relative;
     display: flex;
-    align-content: center;
-    align-items: baseline;
     justify-content: center;
+    align-items: center;
+    left: 0px;
+    top: -65px;
+    margin: 0px;
+}
+
+.map-container {
+    width: 70%;
+    height: 70vh;
+    overflow: hidden;
+    border: unset;
+    margin: 0px;
+}
+
+.locations {
+    margin: 0 auto;
     width: 100%;
+    position: relative;
+    top: -15px;
 }
 
-.menu-toggle {
-    background-color: white;
+.container-transporte {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0;
+    width: 85%;
+    align-items: baseline;
+    margin: 0 auto;
 }
 
-.bus-container {
-    width: 100%;
+.container-transporte .text-transport {
+    width: 30%;
 }
 
-.location-item img {
-    width: 100%;
-    height: 50vh;
-    object-fit: none;
-    object-position: center;
-    
-}
-
-.text-boda {
-    width: 80%;
+.text-transport {
     color: #9f9f9f;
-    margin-block: 0px;
-    text-align: center;
+    text-align: justify;
+    /*margin-bottom: 50px;*/
+    margin-bottom: 35px;
 }
 
+.text-transport h2 {
+    text-align: center;
+    font-weight: lighter;
+    font-family: 'Didot', sans-serif;
+    font-size: 25px;
+    letter-spacing: 0.20em;
+    color: #e06147;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.text-transport h3 {
+    letter-spacing: 0.20em;
+    font-size: 18px;
+    font-family: 'Didot', sans-serif;
+    color: #e06147;
+    font-weight: lighter;
+    text-align: center;
+    margin-block-start: 10px;
+    margin-block-end: 10px;
+}
+
+.text-transport p {
+    font-size: 16px;
+    font-family: 'Optima';
+    font-weight: lighter;
+    margin: 0;
+    text-align: justify;
+}
+
+.text-transport .pshrt {
+    margin: 10px 0;
+    color:#ee8874;
+    text-align: start;
+    font-size: 15px;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    padding: 15px 0;
+    border-color:#bbbabac5;
+    width: 60px;
+    margin: 0 auto;
+    border-radius: 30px;
+}
+
+.icon svg {
+    width: 30px;
+}
 
 @media (max-width: 1135px) {
-    .autobuses{
-        top: 10%;
-        display: flow;
+    .menu-toggle {
+        background-color: white;
+        padding-bottom: 10px;
     }
-    .bus-container {
-        margin-block-end: 50px;
+
+    .map-container {
         width: 100%;
+        height: 75vh;
+        margin-bottom: 30px;
     }
 
-    .location-item {
-        margin-bottom: 40px;
-        width: 100%;
+    .locations {
+        top: -50px;
     }
 
-    .location-item img {
-        object-fit: cover;
-        object-position: right;
+    .container-transporte {
+        display: block;
+        margin: 0 auto;
     }
 
-    .text-boda {
-        width: 80%;
+    .container-transporte .text-transport {
+        width: 90%;
+        justify-content: center;
+        justify-self: center;
+    }
+
+    .text-transport {
         color: #9f9f9f;
         margin-block: 0px;
+        margin-bottom: 30px;
+    }
+
+    .text-transport h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .text-transport h3 {
+        font-size: 16px;
+        text-align: center;
+    }
+
+
+    .text-transport p {
+        font-size: 15px;
+    }
+
+
+    .text-transport .pshrt {
+        font-size: 14px;
     }
 }

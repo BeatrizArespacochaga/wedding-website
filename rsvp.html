@@ -4,21 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Confirmación de Asistencia</title>
-  <link rel="stylesheet" href="menu.css">
-  <link rel="stylesheet" href="assets/css/menu.css">
+  <link rel="stylesheet" href="assets/css/main.css"> <!-- Link del CSS general -->
+  <link rel="stylesheet" href="assets/css/home.css"> <!-- Link del CSS específico de la página principal -->
+  <link rel="stylesheet" href="assets/css/mobile.css"> <!-- Enlace al archivo mobile.css -->
+  <link rel="stylesheet" href="assets/css/menu.css"> <!-- Enlace al archivo mobile.css -->
   <link rel="stylesheet" href="assets/css/rsvp.css"> <!-- Enlace al archivo mobile.css -->
 </head>
 <body>
   <div id="header"></div>
-  <div class="overlay"></div>
-  <div class="contenedor-formulario">
-    <h1>¿ASISTIRÁS A NUESTRA BODA?</h1>
-    <p>Por favor, confirma si asistirás o no al evento para que podamos organizar mejor el día especial.</p>
-    <div class="button-group">
-      <button class="yes-button" onclick="redirectToForm('yes')">Sí, asistiré</button>
-      <button class="no-button" onclick="redirectToForm('no')">No podré asistir</button>
+    <div class="overlay"></div>
+    <div class="rsvp-container">
+      <div class="contenedor-formulario">
+        <h1>¿ASISTIRÁS A NUESTRA BODA?</h1>
+        <p>Por favor, confirma si asistirás o no al evento para que podamos organizar mejor el día especial.</p>
+        <div class="button-group">
+          <button class="yes-button" onclick="redirectToForm('yes')">Sí, asistiré</button>
+          <button class="no-button" onclick="redirectToForm('no')">No podré asistir</button>
+        </div>
+      </div>
     </div>
-  </div>
   <script src="assets/js/scripts.js"></script>
   <script>
     function redirectToForm(answer) {

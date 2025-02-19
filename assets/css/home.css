@@ -55,10 +55,11 @@
     font-family: 'Didot';
     font-size: 2rem; /* Tamaño grande para los nombres */
     font-weight: lighter;
-    /*color: #ea401d;*/
-    color: rgb(136, 136, 136);
+    color: #ea401d;
+    /*color: rgb(136, 136, 136);*/
     margin-block: 0;
     margin-inline: 0;
+    letter-spacing: 0.15rem;
 }
 
 /* Estilo para la fecha */
@@ -66,8 +67,8 @@
     font-family: 'Optima';
     font-size: 1.2rem;
     font-weight: lighter;
-    /*color: #ea401d;*/
-    color: rgb(136, 136, 136);
+    color: #ea401d;
+    /*color: rgb(136, 136, 136);*/
     /*margin: 10px;*/ /* Espacio entre los elementos */
     margin-block: 0;
     margin-inline: 0;
