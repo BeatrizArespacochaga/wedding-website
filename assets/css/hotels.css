@@ -1,0 +1,160 @@
+@import url("menu.css");
+@import url("mobile.css");
+@import url("main.css");
+
+body {
+    margin: 0;
+}
+
+.locations {
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+    top: 0px;
+}
+
+.container-hoteles {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    grid-gap: 150px; /* Espacio entre las tarjetas de los hoteles */
+    justify-items: center; /* Centra las tarjetas dentro de las columnas */
+    margin: 50px auto;
+    max-width: 1200px; /* Ajustamos un máximo ancho si lo necesitas */
+}
+
+.text-hotels {
+    color: #9f9f9f;
+    text-align: justify;
+    margin-bottom: 35px;
+}
+
+.text-hotels h2 {
+    text-align: center;
+    font-weight: lighter;
+    font-family: 'Didot', sans-serif;
+    font-size: 25px;
+    letter-spacing: 0.20em;
+    color: #e06147;
+    margin-bottom: 20px;
+}
+
+.text-hotels h3 {
+    letter-spacing: 0.20em;
+    font-size: 18px;
+    font-family: 'Didot', sans-serif;
+    color: #e06147;
+    font-weight: lighter;
+    text-align: start;
+    margin: 10px 0;
+}
+
+.text-hotels p {
+    font-size: 16px;
+    font-family: 'Optima';
+    font-weight: lighter;
+    margin: 5px 0;
+    text-align: justify;
+}
+
+.text-hotels .photels {
+    text-align: center;
+}
+
+.text-hotels a {
+    margin: 10px 0;
+    color: #ee8874;
+    font-size: 15px;
+}
+
+.text-hotels img {
+    height: 40vh;
+    object-fit: cover;
+    width: 100%;
+}
+
+.hcontainer {
+    width:45%;
+    margin:0 auto;
+    text-align: center;
+}
+
+
+.photo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@media (max-width: 1135px) {
+    .container-hoteles {
+        grid-template-columns: 1fr; /* Para pantallas más pequeñas, cambia a una sola columna */
+    }
+
+    .menu-toggle {
+        background-color: white;
+        padding-bottom: 10px;
+    }
+
+    .map-container {
+        width: 100%;
+        height: 75vh;
+        margin-bottom: 30px;
+    }
+
+    .locations {
+        top: 100px;
+    }
+
+    .container-hoteles {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .container-hoteles .text-hotels {
+        width: 85%;
+        justify-content: center;
+    }
+
+    .text-hotels {
+        color: #9f9f9f;
+        margin-bottom: 30px;
+    }
+
+    .text-hotels h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .text-hotels h3 {
+        font-size: 16px;
+        text-align: start;
+    }
+
+    .text-hotels p {
+        font-size: 14px;
+    }
+
+    .text-hotels .pshrt {
+        font-size: 14px;
+    }
+
+
+    .text-hotels p a {
+        font-size: 14px;
+    }
+
+    .hcontainer {
+        width:85%;
+    }
+
+    .text-hotels .photels {
+        text-align: justify;
+    }
+
+    .text-hotels img {
+        height: 30vh;
+    }
+}
