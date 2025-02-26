@@ -92,6 +92,7 @@ body {
 @media (max-width: 1135px) {
     .container-hoteles {
         grid-template-columns: 1fr; /* Para pantallas más pequeñas, cambia a una sola columna */
+        margin: 0 auto;
     }
 
     .menu-toggle {
@@ -107,11 +108,6 @@ body {
 
     .locations {
         top: 100px;
-    }
-
-    .container-hoteles {
-        display: block;
-        margin: 0 auto;
     }
 
     .container-hoteles .text-hotels {
