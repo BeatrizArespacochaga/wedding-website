@@ -59,18 +59,13 @@ img.imagen-playa{
     display: contents;
 }
 
-.location-item {
-    display: flex;
+.location-pboda {
+    display: grid;
     align-items: center;
-    gap: 90px;
-    margin-bottom: 50px;
-    width: 90%;
-    margin-right:auto;
-    margin-left:auto;
-    margin-bottom: 4em;
+    justify-items: center;
 }
 
-.location-item img{
+.location-pboda img{
     width: 100vh;
     height: 50vh;
     object-fit: cover;
@@ -78,13 +73,13 @@ img.imagen-playa{
     overflow: hidden;
 }
 
-.location-text {
-    position: relative; /* Elimina la necesidad de ajustar con top */
-    text-align: start;
-    margin: 0; /* Asegura que no haya márgenes extras */
+.location-pboda {
+    display: grid;
+    align-items: center;
+    justify-items: center;
 }
 
-.location-text h2 {
+.location-pboda h2 {
     width: 100%;
     font-weight: lighter;
     font-family: 'Didot', sans-serif;
@@ -97,26 +92,22 @@ img.imagen-playa{
     margin-inline: 0;
 }
 
-.location-text p {
-    width: 100%;
-    margin-bottom: 5px;
-    text-align: justify;
+.location-pboda p {
     color: #9f9f9f;
-    letter-spacing: normal;
     font-size: 1.2rem;
     font-family: 'Optima';
-    line-height: 1.45;
-    margin-block-end: 0.5em;
-    margin-block-start: 0em;
-    margin-inline: 0;
+    margin-top: 50px;
+    margin-bottom: 0;
+    text-align: justify;
 }
 
-.location-text a {
+.location-pboda a {
     font-size: 1rem;
     font-family: 'Optima';
     text-decoration: underline;
     color: #e06147;
-    text-align: center;
+    text-align: justify;
+    margin-bottom: 10px;
     
 }
 
@@ -135,7 +126,7 @@ img.imagen-playa{
     color: #fff;
 }
 
-.location-mobile {
+.pboda-container {
     display: none;
 }
 
@@ -196,11 +187,11 @@ img.imagen-playa{
         padding: 30px 5%;
     }
 
-    .location-mobile {
+    .pboda-container {
         display: contents;
     }    
     
-    .location-item {
+    .location-pboda {
         display: flex;
         align-items: center;
         gap: 20px;
@@ -208,21 +199,21 @@ img.imagen-playa{
         width: 100%;
     }
 
-    .location-item.reverse {
+    .location-pboda.reverse {
         flex-direction: row-reverse;
     }
 
-    .location-item img {
+    .location-pboda img {
         width: 50%;
         height: auto;
         border-radius: 0px;
     }
 
-    .location-text {
+    .location-pboda {
         position:static;
     }
 
-    .location-item h2 {
+    .location-pboda h2 {
         font-size: 1.1em;
         margin-bottom: 10px;
         font-weight: lighter;
@@ -231,20 +222,14 @@ img.imagen-playa{
         font-family: 'Didot', sans-serif;
     }
 
-    .location-text p {
+    .location-pboda p {
         font-size: 1.3rem;
         margin-top: 20px;
         margin-bottom: 5px;
-        font-family: 'Optima';
-        width: 100%;
-        line-height: 1.45em;
-        font-size: 1.07rem;
-        text-align: center;
-        color: grey;
         font-size: 1rem;
     }
 
-    .location-text a {
+    .location-pboda a {
         font-size: 1rem;
         font-family: 'Optima';
         text-decoration: underline;
@@ -254,22 +239,22 @@ img.imagen-playa{
         display: block;
     }
 
-    .location-item {
+    .location-pboda {
         flex-direction: column;
     }
 
-    .location-item img,
-    .location-text {
+    .location-pboda img,
+    .location-pboda {
         width: 100%;
     }
 
-    .location-item img {
+    .location-pboda img {
         max-height: 255px;
         object-fit: cover;
         object-position: center bottom;
     }
 
-    .location-item.reverse {
+    .location-pboda.reverse {
         flex-direction: column;
     }
 
