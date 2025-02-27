@@ -185,13 +185,8 @@ img.imagen-playa{
 
     .text-boda {
         font-size: 1rem;
-        font-family: 'Optima';
-        font-weight: lighter;
         padding: 0;
-        width:95%;
-        margin: 0 auto;      
-        text-align: justify;
-        color: rgb(136, 136, 136);
+        width:95%;     
         margin-block-end: 20px;
     }
 
@@ -233,6 +228,7 @@ img.imagen-playa{
 
     .location-text {
         position:static;
+        color: #9f9f9f;
     }
 
     .location-item h2 {
@@ -253,8 +249,8 @@ img.imagen-playa{
         line-height: 1.45em;
         font-size: 1.07rem;
         text-align: center;
-        color: grey;
         font-size: 1rem;
+        color: #9f9f9f;
     }
 
     .location-text a {
@@ -289,6 +285,10 @@ img.imagen-playa{
     .location-compt {
         display: none;
     } 
+
+    .map-container {
+        margin-top: 0;
+    }
 }
 
 @media (min-width: 1030px) {
