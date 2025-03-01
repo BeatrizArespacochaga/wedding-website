@@ -93,6 +93,7 @@ body {
     .container-hoteles {
         grid-template-columns: 1fr; /* Para pantallas más pequeñas, cambia a una sola columna */
         margin: 0 auto;
+        grid-gap: 0;
     }
 
     .menu-toggle {

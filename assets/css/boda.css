@@ -95,6 +95,7 @@ img.imagen-playa{
     position: relative; /* Elimina la necesidad de ajustar con top */
     text-align: start;
     margin: 0; /* Asegura que no haya márgenes extras */
+    width: 50%;
 }
 
 .location-text h2 {
