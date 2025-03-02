@@ -11,6 +11,10 @@ img.imagen-playa{
     object-fit: cover;
 }
 
+.text-boda {
+    margin-block-end: 20px;
+}
+
 .text-boda a {
     font-size: 1rem;
     color: #e06147;
