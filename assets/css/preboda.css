@@ -47,6 +47,10 @@ img.imagen-playa{
         z-index: 1;
     }
 
+    .hero-section div.overlay {
+        background-color: #00000052;
+    }
+
     .text-boda {
         margin: auto 10px 15px auto;      
     }
