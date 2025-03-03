@@ -242,20 +242,18 @@ img.imagen-playa{
     }
 
     .location-text p {
-        font-size: 1.3rem;
+        font-size: 15px;
         margin-top: 20px;
         margin-bottom: 5px;
         font-family: 'Optima';
         width: 100%;
         line-height: 1.45em;
-        font-size: 1.07rem;
         text-align: center;
-        font-size: 1rem;
         color: #9f9f9f;
     }
 
     .location-text a {
-        font-size: 1rem;
+        font-size: 13px;
         font-family: 'Optima';
         text-decoration: underline;
         color: #e06147;
