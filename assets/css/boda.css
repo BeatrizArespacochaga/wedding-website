@@ -41,7 +41,7 @@ img.imagen-playa{
 .text-boda {
     font-family: 'Optima';
     font-weight: lighter;
-    font-size: 1.2rem;
+    font-size: 15px;
     width:60%;
     margin: 0 auto;
     text-align: justify;
@@ -56,7 +56,7 @@ img.imagen-playa{
     text-align: center;
     font-weight: lighter;
     font-family: 'Didot', sans-serif;
-    font-size: 1.6rem;
+    font-size: 18px;
     letter-spacing: 0.20em;
     word-spacing: 0.15em;
     color: #e06147;
