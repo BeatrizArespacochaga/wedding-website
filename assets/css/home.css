@@ -101,4 +101,8 @@
     button.burger{
         margin-right: 0px;
     }
+
+    .hero-container {
+        overflow: hidden;
+    }
 }
