@@ -7,6 +7,7 @@ body {
     padding: 0;
     height: 100vh;
     display: block;
+    overflow: hidden;
   }
   
   .rsvp-container {
@@ -18,6 +19,7 @@ body {
     left: 0;
     position: absolute;
     width: 100%;
+    overflow: hidden;
   }
 
   .overlay {
@@ -29,6 +31,7 @@ body {
     background-color: rgba(255, 255, 255, 0.73);
     z-index: 1;
     pointer-events: none; /* Evita que bloquee clics en botones */
+    overflow: hidden;
   }  
 
   .contenedor-formulario {
