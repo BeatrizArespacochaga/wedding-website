@@ -7,7 +7,6 @@ body {
     padding: 0;
     height: 100vh;
     display: block;
-    overflow: hidden;
   }
   
   .rsvp-container {
@@ -17,7 +16,7 @@ body {
     align-items: center;
     top: 0;
     left: 0;
-    position: relative;
+    position: absolute;
     width: 100%;
     overflow: hidden;
   }
@@ -35,7 +34,7 @@ body {
   }  
 
   .contenedor-formulario {
-    position: absolute;
+    position: relative;
     z-index: 2;
     background-color: #ffffff;
     border-radius: 10px;
@@ -122,13 +121,4 @@ body {
   }
 
 
-  @media (max-width: 1135px){
-    body {
-      height: 100%;
-    }
-
-    .rsvp-container {
-      top: 50%;
-  }
-
-  }
+  
