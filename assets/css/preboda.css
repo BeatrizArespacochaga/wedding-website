@@ -16,7 +16,7 @@ img.imagen-playa{
 }
 
 .text-boda a {
-    font-size: 1rem;
+    font-size: 15px;
     color: #e06147;
     margin-bottom: 10px;
 }
@@ -25,12 +25,11 @@ img.imagen-playa{
     display: grid;
     align-items: center;
     justify-items: center;
-    gap: 15px;
     margin-bottom: 50px;
 }
 
 .location-pboda img{
-    width: 100vh;
+    width: 87vh;
     height: 50vh;
     object-fit: cover;
     object-position: center bottom;
@@ -55,14 +54,12 @@ img.imagen-playa{
         margin: auto 10px 15px auto;      
     }
 
-    .text-boda h2{
-        letter-spacing: 0.15em;
-        word-spacing: 0;
-        font-size: 18px;
+    .text-boda a {
+        font-size: 14px;
     }
 
-    .text-boda a {
-        font-size: 0.9em;
+    .text-boda img {
+        margin-top: 25px;
     }
     
     .location-pboda {

@@ -1,3 +1,9 @@
+// Verifica si la URL contiene "mayores=true"
+const isMayores = window.location.search.includes('mayores=true');
+
+// Elige el header correcto
+const headerFile = isMayores ? 'headermayores.html' : 'header.html';
+
 fetch('header.html')
   .then(response => response.text())
   .then(data => {

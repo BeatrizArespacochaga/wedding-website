@@ -5,12 +5,30 @@
 @import url("boda.css");
 
 .contactos{
-    position: absolute;
-    top:20%;
+    top:15%;
     display: flex;
     align-content: center;
     align-items: baseline;
     justify-content: center;
+}
+
+.one {
+    display: block;
+    margin-bottom: 50px;
+}
+
+.two {
+    display: none;
+}
+
+
+.contact-title .text-boda {
+    width: 50%;
+    text-align: center;
+}
+
+.contact-title .text-boda h2 {
+    font-size: 25px;
 }
 
 .menu-toggle {
@@ -39,11 +57,49 @@
     font-size: 18px;
 }
 
+p {
+    font-size: 16px;
+    font-family: 'Optima';
+    font-weight: lighter;
+    color: #9f9f9f;
+}
+
 @media (max-width: 1135px) {
-    .contactos{
-        top: 10%;
-        display: flow;
+    .one {
+        display: none;
     }
+
+    .contactos {
+        display: flow;
+        position: absolute;
+        top: 15%;
+    }
+
+    .two {
+        margin-bottom: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .contact-title .text-boda {
+        width: 80%;
+        text-align: justify;
+        
+    }
+
+    .contact-title .text-boda h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    /*
+    .title-text p {
+        width: 80%;
+        text-align: center;
+    }*/
+
     .contact-container {
         margin-block-end: 50px;
         width: 100%;
@@ -64,7 +120,7 @@
     }
 
     .text-boda h2 {
-        font-size: 18px;
+        font-size: 16px;
         margin-bottom: 0px;
     }
 
