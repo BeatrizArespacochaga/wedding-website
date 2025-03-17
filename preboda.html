@@ -7,9 +7,7 @@
   <link rel="stylesheet" href="assets/css/preboda.css">
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-        const esMayorSaved = document.cookie.includes("mayores=true") || localStorage.getItem("mayores") === "true";
-
-        if (esMayorSaved) {
+        if (esMayorGuardado) {
             document.body.innerHTML = "<h2>HTTP 403 Acceso denegado. Usa la versión adecuada.</h2>";
         }
     });

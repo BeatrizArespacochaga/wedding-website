@@ -10,9 +10,11 @@
   <link rel="stylesheet" href="assets/css/menu.css"> <!-- Enlace al archivo mobile.css -->
   <link rel="stylesheet" href="assets/css/rsvp.css"> <!-- Enlace al archivo mobile.css -->
   <script>
-    if (esMayorGuardado) {
-      document.body.innerHTML = "<h2>HTTP 403 Acceso denegado. Usa la versión adecuada.</h2>";
-    }
+    document.addEventListener("DOMContentLoaded", () => {
+        if (esMayorGuardado) {
+            document.body.innerHTML = "<h2>HTTP 403 Acceso denegado. Usa la versión adecuada.</h2>";
+        }
+    });
   </script>
 </head>
 <body>
