@@ -1,5 +1,19 @@
-// Verifica si la URL contiene "mayores=true"
+// Verifica si la URL contiene "mheader=true"
+//const urlParams = new URLSearchParams(window.location.search);
+//const isMayores = urlParams.has('mheader');
 const isMayores = window.location.search.includes('mheader=true');
+
+// 🔹 Guarda la preferencia en cookies y Local Storage si el usuario usa "?mheader=true"
+if (isMayores) {
+    document.cookie = "mayores=true; path=/";
+    localStorage.setItem("mayores", "true");
+}
+
+// 🔹 Si el usuario regresa SIN "mheader=true", pero ya lo tenía antes, lo redirigimos
+const esMayorGuardado = document.cookie.includes("mayores=true") || localStorage.getItem("mayores") === "true";
+if (esMayorGuardado && !isMayores) {
+    window.location.href = window.location.pathname + "?mheader=true";
+}
 
 // Elige el header correcto
 const headerFile = isMayores ? 'headermayores.html' : 'header.html';
