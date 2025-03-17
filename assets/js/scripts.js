@@ -4,7 +4,7 @@ const isMayores = window.location.search.includes('mayores=true');
 // Elige el header correcto
 const headerFile = isMayores ? 'headermayores.html' : 'header.html';
 
-fetch('header.html')
+fetch(headerFile)
   .then(response => response.text())
   .then(data => {
     document.getElementById('header').innerHTML = data;
