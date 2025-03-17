@@ -6,8 +6,6 @@
   <title>B&M: Hoteles</title>
   <link rel="stylesheet" href="assets/css/hotels.css">
   <script>
-    const esMayorGuardado = document.cookie.includes("mayores=true") || localStorage.getItem("mayores") === "true";
-    
     if (esMayorGuardado) {
       document.body.innerHTML = "<h2>HTTP 403 Acceso denegado. Usa la versión adecuada.</h2>";
     }

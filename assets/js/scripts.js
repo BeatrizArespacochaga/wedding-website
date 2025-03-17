@@ -16,7 +16,7 @@ if (esMayorGuardado && !isMayores) {
 }
 
 // Elige el header correcto
-const headerFile = isMayores ? 'confirmacion.html' : 'header.html';
+const headerFile = isMayores ? 'headermayores.html' : 'header.html';
 
 fetch(headerFile)
   .then(response => response.text())
