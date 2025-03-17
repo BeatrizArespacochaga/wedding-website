@@ -1,5 +1,5 @@
 // Verifica si la URL contiene "mayores=true"
-const isMayores = window.location.search.includes('mayores=true');
+const isMayores = window.location.search.includes('mheader=true');
 
 // Elige el header correcto
 const headerFile = isMayores ? 'headermayores.html' : 'header.html';
