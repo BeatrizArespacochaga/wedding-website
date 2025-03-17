@@ -6,7 +6,7 @@
   <title>B&M: Pre-boda</title>
   <link rel="stylesheet" href="assets/css/preboda.css">
   <script>
-    const esMayorSaved = document.cookie.includes("mheader=true") || localStorage.getItem("mayores") === "true";
+    const esMayorSaved = document.cookie.includes("mayores=true") || localStorage.getItem("mayores") === "true";
 
     if (esMayorSaved) {
       document.body.innerHTML = "<h2>HTTP 403 Acceso denegado. Usa la versión adecuada.</h2>";
