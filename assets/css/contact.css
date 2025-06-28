@@ -62,6 +62,7 @@ p {
     font-family: 'Optima';
     font-weight: lighter;
     color: #9f9f9f;
+    text-align: center;
 }
 
 @media (max-width: 1135px) {
@@ -126,5 +127,6 @@ p {
 
     .text-boda p {
         margin-top: 5px;
+        text-align: center;
     }
 }
